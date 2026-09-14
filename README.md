@@ -1,3 +1,6 @@
+> **번역 안내**: 이 브랜치(ko)는 비공식 한국어 번역 브랜치입니다.
+> 원문과 불일치하는 경우 원문(main)이 우선하며, 이 프로젝트의 Apache-2.0 라이선스가 그대로 적용됩니다.
+
 # Designing Multi-Agent Systems
 
 [Designing Multi-Agent Systems: Principles, Patterns, and Implementation for AI Agents](https://buy.multiagentbook.com/?utm_source=github&utm_medium=readme)의 공식 코드 저장소입니다. 저자는 [Victor Dibia](https://victordibia.com)입니다.
