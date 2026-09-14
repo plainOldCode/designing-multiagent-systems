@@ -1,8 +1,8 @@
-# PicoAgents Examples
+# PicoAgents 예시
 
-Runnable examples for the book [Designing Multi-Agent Systems](https://buy.multiagentbook.com/?utm_source=github&utm_medium=readme-examples) by Victor Dibia. Each example maps to a book chapter that explains the theory and design trade-offs behind it.
+Victor Dibia의 저서 [Designing Multi-Agent Systems](https://buy.multiagentbook.com/?utm_source=github&utm_medium=readme-examples)를 위한 실행 가능한 예시들입니다. 각 예시는 그 뒤에 있는 이론과 설계 트레이드오프를 설명하는 책의 장에 대응합니다.
 
-## Quick Start
+## 빠른 시작
 
 ```bash
 cd picoagents
@@ -12,91 +12,91 @@ cd ..
 python examples/agents/basic-agent.py
 ```
 
-## Examples by Chapter
+## 장별 예시
 
-| Chapter | Directory | What You'll Learn |
+| 장 | 디렉터리 | 배우게 되는 것 |
 |---------|-----------|-------------------|
-| Ch 4: Building Your First Agent | [`agents/`](agents/) | Tool use, memory, structured output, middleware |
-| Ch 5: Workflows | [`workflows/`](workflows/) | Sequential, conditional, parallel execution patterns |
-| Ch 6: Orchestration | [`orchestration/`](orchestration/) | Round-robin, AI-driven, and plan-based multi-agent coordination |
-| Ch 10: Evaluation | [`evaluation/`](evaluation/) | LLM-as-judge, reference-based evaluation, metrics |
-| Ch 11: Optimization | [`optimization/`](optimization/) | Optimizing instructions, skills, and tools from eval feedback |
+| 4장: 첫 번째 에이전트(agent) 만들기 | [`agents/`](agents/) | 도구 사용, 메모리(memory), 구조화된 출력, 미들웨어(middleware) |
+| 5장: 워크플로(workflow) | [`workflows/`](workflows/) | 순차, 조건부, 병렬 실행 패턴 |
+| 6장: 오케스트레이션(orchestration) | [`orchestration/`](orchestration/) | 라운드 로빈, AI 주도, 계획 기반 멀티 에이전트 조정 |
+| 10장: 평가(evaluation) | [`evaluation/`](evaluation/) | LLM-as-judge, 기준 기반 평가, 지표 |
+| 11장: 최적화 | [`optimization/`](optimization/) | 평가 피드백으로부터 지시문, 스킬, 도구 최적화 |
 
-## All Examples
+## 모든 예시
 
 ### agents/
-Core agent patterns from Chapter 4.
+4장의 핵심 에이전트 패턴들.
 
-| File | Description |
+| 파일 | 설명 |
 |------|-------------|
-| `basic-agent.py` | Simple agent with weather and calculator tools |
-| `memory.py` | Agent with conversation memory |
-| `structured-output.py` | Agent returning Pydantic models |
-| `middleware.py` | Request/response middleware pipeline |
-| `computer_use.py` | Browser automation agent |
-| `agent_as_tool.py` | Using an agent as a tool for another agent |
-| `serialization.py` | Saving and loading agent state |
+| `basic-agent.py` | 날씨·계산기 도구를 갖춘 단순 에이전트 |
+| `memory.py` | 대화 메모리를 갖춘 에이전트 |
+| `structured-output.py` | Pydantic 모델을 반환하는 에이전트 |
+| `middleware.py` | 요청/응답 미들웨어 파이프라인 |
+| `computer_use.py` | 브라우저 자동화 에이전트 |
+| `agent_as_tool.py` | 한 에이전트를 다른 에이전트의 도구로 사용 |
+| `serialization.py` | 에이전트 상태 저장 및 불러오기 |
 
 ### workflows/
-Explicit control patterns from Chapter 6.
+6장의 명시적 제어 패턴들.
 
-| File | Description |
+| 파일 | 설명 |
 |------|-------------|
-| `sequential.py` | Chain steps with typed inputs/outputs |
-| `conditional.py` | Conditional branching and fan-in merge |
-| `general.py` | Extended sequential pipeline with fluent API |
-| `checkpoint_example.py` | Save and resume workflow state |
-| `data_visualization/` | Complete data analysis workflow |
-| `yc_analysis/` | Y Combinator startup analysis workflow |
+| `sequential.py` | 타입이 지정된 입출력으로 단계 연결 |
+| `conditional.py` | 조건부 분기와 팬인 병합 |
+| `general.py` | 플루언트 API를 갖춘 확장 순차 파이프라인 |
+| `checkpoint_example.py` | 워크플로 상태 저장 및 재개 |
+| `data_visualization/` | 완전한 데이터 분석 워크플로 |
+| `yc_analysis/` | Y Combinator 스타트업 분석 워크플로 |
 
 ### orchestration/
-Autonomous coordination from Chapter 7.
+7장의 자율 조정.
 
-| File | Description |
+| 파일 | 설명 |
 |------|-------------|
-| `round-robin.py` | Agents take turns in sequence |
-| `ai-driven.py` | LLM selects next speaker |
-| `ai-driven-research.py` | Research team with AI coordination |
-| `plan-based.py` | Orchestrator creates and follows a plan |
+| `round-robin.py` | 에이전트들이 순서대로 번갈아 발언 |
+| `ai-driven.py` | LLM이 다음 화자를 선택 |
+| `ai-driven-research.py` | AI가 조정하는 리서치 팀 |
+| `plan-based.py` | 오케스트레이터가 계획을 세우고 따름 |
 
 ### evaluation/
-Testing and metrics from Chapter 10.
+10장의 테스트와 지표.
 
-| File | Description |
+| 파일 | 설명 |
 |------|-------------|
-| `agent-evaluation.py` | LLM-as-judge evaluation |
-| `reference-based-evaluation.py` | Compare against expected outputs |
-| `comprehensive-evaluation.py` | Full evaluation suite |
+| `agent-evaluation.py` | LLM-as-judge 평가 |
+| `reference-based-evaluation.py` | 기대 출력과 비교 |
+| `comprehensive-evaluation.py` | 전체 평가 스위트 |
 
 ### optimization/
-Automatically improving an agent from evaluation feedback, from Chapter 11.
+11장의, 평가 피드백으로부터 에이전트를 자동 개선합니다.
 
-| File | Description |
+| 파일 | 설명 |
 |------|-------------|
-| `optimize-agent.py` | The core optimization loop: reflect on failures, rewrite the instruction |
-| `generalization.py` | Optimize on train, score on held-out test: learned rules or memorized eval? |
-| `compare-optimizers.py` | Reflective, Pareto, MIPRO, and real GEPA under an equal budget |
+| `optimize-agent.py` | 핵심 최적화 루프: 실패를 성찰하고 지시문 재작성 |
+| `generalization.py` | 학습 데이터에서 최적화, 보존된 테스트에서 채점: 규칙을 배운 것인가, 평가 문제를 외운 것인가? |
+| `compare-optimizers.py` | 동일한 예산에서 Reflective, Pareto, MIPRO, 실제 GEPA 비교 |
 
-### Other Examples
+### 기타 예시
 
-| Directory | Description |
+| 디렉터리 | 설명 |
 |-----------|-------------|
-| `tools/` | Tool definitions and approval patterns |
-| `memory/` | Memory implementations (list, tool-based) |
-| `mcp/` | Model Context Protocol integration |
-| `otel/` | OpenTelemetry observability |
-| `webui/` | Web UI examples |
-| `app/` | Full-stack application example |
-| `contextengineering/` | Context window management strategies |
-| `frameworks/` | Same patterns in other frameworks (LangGraph, Google ADK, etc.) |
+| `tools/` | 도구 정의와 승인 패턴 |
+| `memory/` | 메모리 구현 (list, tool-based) |
+| `mcp/` | Model Context Protocol 통합 |
+| `otel/` | OpenTelemetry 관측성(observability) |
+| `webui/` | 웹 UI 예시 |
+| `app/` | 풀스택 애플리케이션 예시 |
+| `contextengineering/` | 컨텍스트 윈도우 관리 전략 |
+| `frameworks/` | 다른 프레임워크에서의 동일 패턴 (LangGraph, Google ADK 등) |
 
-## Framework Comparisons
+## 프레임워크 비교
 
-The [`frameworks/`](frameworks/) directory shows equivalent implementations across:
+[`frameworks/`](frameworks/) 디렉터리는 다음 전반의 동등 구현을 보여줍니다:
 
 - **agent-framework/** - Microsoft Agent Framework
 - **langgraph/** - LangChain LangGraph
 - **google-adk/** - Google Agent Development Kit
 - **claude-agent-sdk/** - Anthropic Claude Agent SDK
 
-Each implements the same agent/workflow/orchestration patterns for comparison.
+각 디렉터리는 비교를 위해 동일한 에이전트/워크플로/오케스트레이션 패턴을 구현합니다.

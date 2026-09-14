@@ -1,83 +1,83 @@
 # Designing Multi-Agent Systems
 
-Official code repository for [Designing Multi-Agent Systems: Principles, Patterns, and Implementation for AI Agents](https://buy.multiagentbook.com/?utm_source=github&utm_medium=readme) by [Victor Dibia](https://victordibia.com).
+[Designing Multi-Agent Systems: Principles, Patterns, and Implementation for AI Agents](https://buy.multiagentbook.com/?utm_source=github&utm_medium=readme)의 공식 코드 저장소입니다. 저자는 [Victor Dibia](https://victordibia.com)입니다.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/victordibia/designing-multiagent-systems?quickstart=1)
 
 [![Designing Multi-Agent Systems](./docs/images/bookcover.png)](https://buy.multiagentbook.com/?utm_source=github&utm_medium=readme)
 
-Learn to build effective multi-agent systems from first principles through complete, tested implementations. This repository includes **PicoAgents**—a full-featured multi-agent framework built entirely from scratch for the sole purpose of teaching you how multi-agent systems work. Every component, from agent reasoning loops to orchestration patterns, is implemented with clarity and transparency.
+완전하고 검증된 구현체를 통해 제1원리(first principles)로부터 효과적인 멀티 에이전트 시스템(multi-agent system)을 구축하는 방법을 배웁니다. 이 저장소에는 멀티 에이전트 시스템이 어떻게 작동하는지를 가르치는 단일 목적을 위해 처음부터 완전히 만든 만능급 멀티 에이전트 프레임워크(framework) **PicoAgents**가 포함되어 있습니다. 에이전트(agent) 추론 루프부터 오케스트레이션(orchestration) 패턴까지 모든 구성 요소가 명료성과 투명성을 갖추어 구현되어 있습니다.
 
-[Buy Digital Edition](https://buy.multiagentbook.com/?utm_source=github&utm_medium=readme) | [Paperback on Amazon](https://www.amazon.com/dp/B0G2BCQQJY) | [Hardcover on Amazon](https://www.amazon.com/dp/B0G2F6T2BZ)
+[전자책 구매](https://buy.multiagentbook.com/?utm_source=github&utm_medium=readme) | [Amazon 페이퍼백](https://www.amazon.com/dp/B0G2BCQQJY) | [Amazon 하드커버](https://www.amazon.com/dp/B0G2F6T2BZ)
 
 ---
 
-## Why This Book & Code Repository?
+## 왜 이 책과 코드 저장소인가?
 
-As the AI agent space evolves rapidly, clear patterns are emerging for building effective multi-agent systems. This book focuses on identifying these patterns and providing practical guidance for applying them effectively.
+AI 에이전트 분야가 빠르게 진화하면서, 효과적인 멀티 에이전트 시스템을 만들기 위한 명확한 패턴들이 분명히 드러나고 있습니다. 이 책은 이러한 패턴을 식별하고 효과적으로 적용하기 위한 실질적인 지침을 제공하는 데 초점을 맞춥니다.
 
-**What makes this approach unique:**
+**이 방식이 특별한 이유:**
 
-- **Fundamentals-first**: Build from scratch to understand every component and design decision
-- **Complete implementations**: Every theoretical concept backed by working, tested code
-- **Framework-agnostic**: Core patterns that transcend any specific framework (avoids the lock in or outdated api issue common with books that focus on a single framework)
-- **Production considerations**: Evaluation, optimization, and deployment guidance from real-world experience
+- **기초 우선**: 처음부터 직접 만들어 모든 구성 요소와 설계 결정을 이해합니다
+- **완전한 구현**: 모든 이론적 개념을 실제로 동작하고 검증된 코드로 뒷받침합니다
+- **프레임워크 독립적**: 특정 프레임워크를 초월하는 핵심 패턴 (단일 프레임워크 중심의 책에서 흔한 종속(lock-in)이나 낡은 API 문제를 피합니다)
+- **운영 고려사항**: 실제 경험에서 나온 평가(evaluation), 최적화, 배포 지침
 
-## What You'll Learn & Build
+## 무엇을 배우고 무엇을 구축하는가
 
-The book is organized across 4 parts, taking you from theory to production:
+이 책은 이론에서 운영까지 이르는 4개 부분(부)으로 구성되어 있습니다:
 
-### Part I: Foundations of Multi-Agent Systems
+### 1부: 멀티 에이전트 시스템의 기초
 
-| Chapter  | Title                                        | Code                                                                              | Learning Outcome                                         |
+|  장  | 제목 | 코드 | 학습 성과 |
 | -------- | -------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| **Ch 1** | Understanding Multi-Agent Systems            | Poet/critic example, references [`yc_analysis/`](examples/workflows/yc_analysis/) | Understand when multi-agent systems are needed           |
-| **Ch 2** | Multi-Agent Patterns                         | -                                                                                 | Master coordination strategies (workflows vs autonomous) |
-| **Ch 3** | UX Design Principles for Multi-Agent Systems | -                                                                                 | Principles for building intuitive agent interfaces       |
+| **1장** | 멀티 에이전트 시스템 이해 | 시인/비평가 예시, [`yc_analysis/`](examples/workflows/yc_analysis/) 참고 | 멀티 에이전트 시스템이 언제 필요한지 이해 |
+| **2장** | 멀티 에이전트 패턴 | - | 조정 전략 숙달(워크플로(workflow) vs 자율) |
+| **3장** | 멀티 에이전트 시스템을 위한 UX 설계 원칙 | - | 직관적인 에이전트 인터페이스 구축 원칙 |
 
-### Part II: Building Multi-Agent Systems from Scratch
+### 2부: 멀티 에이전트 시스템을 처음부터 구축하기
 
-| Chapter  | Title                                 | Code                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Learning Outcome                                                                             |
+| 장 | 제목 | 코드 | 학습 성과 |
 | -------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| **Ch 4** | Building Your First Agent             | [`agents/_agent.py`](picoagents/src/picoagents/agents/_agent.py), [`basic-agent.py`](examples/agents/basic-agent.py), [`memory.py`](examples/agents/memory.py), [`middleware.py`](examples/agents/middleware.py), [`structured-output.py`](examples/agents/structured-output.py), [`agent_as_tool.py`](examples/agents/agent_as_tool.py), [`otel/`](examples/otel/), [`memory/`](examples/memory/), [`tools/approval_example.py`](examples/tools/approval_example.py) <br> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/victordibia/designing-multiagent-systems/blob/main/examples/notebooks/01_basic_agent.ipynb) | Build agents with tools, memory, streaming, middleware, observability, and human-in-the-loop |
-| **Ch 5** | Computer Use Agents                   | [`agents/_computer_use/`](picoagents/src/picoagents/agents/_computer_use/), [`computer_use.py`](examples/agents/computer_use.py)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Build browser automation agents with multimodal reasoning                                    |
-| **Ch 6** | Building Multi-Agent Workflows        | [`workflow/`](picoagents/src/picoagents/workflow/), [`workflows/`](examples/workflows/)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Build type-safe workflows with streaming observability                                       |
-| **Ch 7** | Autonomous Multi-Agent Orchestration  | [`orchestration/`](picoagents/src/picoagents/orchestration/), [`round-robin.py`](examples/orchestration/round-robin.py), [`ai-driven.py`](examples/orchestration/ai-driven.py), [`plan-based.py`](examples/orchestration/plan-based.py)                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Implement GroupChat, LLM-driven, and plan-based orchestration (Magentic One patterns)        |
-| **Ch 8** | Building Modern Agent UX Applications | [`app/`](examples/app/) (minimal FastAPI+SSE example), [`webui/`](picoagents/src/picoagents/webui/) (production React UI)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Build interactive agent applications with web UI, auto-discovery, and real-time streaming    |
-| **Ch 9** | Multi-Agent Frameworks                | [`frameworks/`](examples/frameworks/) (Microsoft Agent Framework, Google ADK, LangGraph comparisons)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Evaluate and choose the right multi-agent framework                                          |
+| **4장** | 첫 번째 에이전트 만들기 | [`agents/_agent.py`](picoagents/src/picoagents/agents/_agent.py), [`basic-agent.py`](examples/agents/basic-agent.py), [`memory.py`](examples/agents/memory.py), [`middleware.py`](examples/agents/middleware.py), [`structured-output.py`](examples/agents/structured-output.py), [`agent_as_tool.py`](examples/agents/agent_as_tool.py), [`otel/`](examples/otel/), [`memory/`](examples/memory/), [`tools/approval_example.py`](examples/tools/approval_example.py) <br> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/victordibia/designing-multiagent-systems/blob/main/examples/notebooks/01_basic_agent.ipynb) | 도구, 메모리(memory), 스트리밍(streaming), 미들웨어(middleware), 관측성(observability), 사람 개입(human-in-the-loop)을 갖춘 에이전트 구축 |
+| **5장** | 컴퓨터 사용 에이전트 | [`agents/_computer_use/`](picoagents/src/picoagents/agents/_computer_use/), [`computer_use.py`](examples/agents/computer_use.py) | 멀티모달 추론을 갖춘 브라우저 자동화 에이전트 구축 |
+| **6장** | 멀티 에이전트 워크플로 구축 | [`workflow/`](picoagents/src/picoagents/workflow/), [`workflows/`](examples/workflows/) | 스트리밍 관측성을 갖춘 타입 안전한 워크플로 구축 |
+| **7장** | 자율 멀티 에이전트 오케스트레이션 | [`orchestration/`](picoagents/src/picoagents/orchestration/), [`round-robin.py`](examples/orchestration/round-robin.py), [`ai-driven.py`](examples/orchestration/ai-driven.py), [`plan-based.py`](examples/orchestration/plan-based.py) | GroupChat, LLM 주도, 계획 기반 오케스트레이션 구현 (Magentic One 패턴) |
+| **8장** | 현대적 에이전트 UX 애플리케이션 구축 | [`app/`](examples/app/) (최소 구성 FastAPI+SSE 예시), [`webui/`](picoagents/src/picoagents/webui/) (운영용 React UI) | 웹 UI, 자동 발견, 실시간 스트리밍을 갖춘 대화형 에이전트 애플리케이션 구축 |
+| **9장** | 멀티 에이전트 프레임워크 | [`frameworks/`](examples/frameworks/) (Microsoft Agent Framework, Google ADK, LangGraph 비교) | 멀티 에이전트 프레임워크를 평가하고 올바르게 선택 |
 
-### Part III: Evaluating and Optimizing Multi-Agent Systems
+### 3부: 멀티 에이전트 시스템 평가 및 최적화
 
-| Chapter   | Title                          | Code                                                                                                         | Learning Outcome                                          |
+| 장 | 제목 | 코드 | 학습 성과 |
 | --------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------- |
-| **Ch 10** | Evaluating Multi-Agent Systems | [`eval/`](picoagents/src/picoagents/eval/), [`agent-evaluation.py`](examples/evaluation/agent-evaluation.py) | Build evaluation frameworks with LLM-as-judge and metrics |
+| **10장** | 멀티 에이전트 시스템 평가 | [`eval/`](picoagents/src/picoagents/eval/), [`agent-evaluation.py`](examples/evaluation/agent-evaluation.py) | LLM-as-judge와 지표를 갖춘 평가 프레임워크 구축 |
 
-### Part IV: Real-World Applications
+### 4부: 실세계 응용
 
-| Chapter   | Title                                     | Code                                              | Learning Outcome                                                                         |
+| 장 | 제목 | 코드 | 학습 성과 |
 | --------- | ----------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| **Ch 14** | Business Questions from Unstructured Data | [`yc_analysis/`](examples/workflows/yc_analysis/) | Production case study: Analyze 5,000+ companies with cost optimization and checkpointing |
-| **Ch 17** | Software Engineering Agent                | [`swe_agent/`](examples/agents/swe_agent/)        | Build a complete software engineering agent with coding tools and workspace management   |
+| **14장** | 비정형 데이터로 비즈니스 질문에 답하기 | [`yc_analysis/`](examples/workflows/yc_analysis/) | 운영 사례 연구: 비용 최적화와 체크포인트(checkpoint)로 5,000개 이상의 기업 분석 |
+| **17장** | 소프트웨어 엔지니어링 에이전트 | [`swe_agent/`](examples/agents/swe_agent/) | 코딩 도구와 워크스페이스 관리를 갖춘 완전한 소프트웨어 엔지니어링 에이전트 구축 |
 
-## Getting Started
+## 시작하기
 
-### Option 1: Interactive Notebooks
+### 옵션 1: 대화형 노트북
 
-Click Colab badges in the chapter tables above to run examples in your browser. No installation required.
+위의 장 표에서 Colab 배지를 클릭하면 브라우저에서 예시를 실행할 수 있습니다. 설치가 필요 없습니다.
 
-### Option 2: GitHub Codespaces
+### 옵션 2: GitHub Codespaces
 
 <a href="https://codespaces.new/victordibia/designing-multiagent-systems?quickstart=1" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open in GitHub Codespaces"></a>
 
-Pre-configured development environment in your browser. Once open:
+브라우저에서 미리 설정된 개발 환경을 제공합니다. 열리면 다음을 진행합니다:
 
-1. Add your API key: `export OPENAI_API_KEY='your-key'`
-2. Run examples: `python examples/agents/basic-agent.py`
-3. Launch Web UI: `picoagents ui`
+1. API 키 추가: `export OPENAI_API_KEY='your-key'`
+2. 예시 실행: `python examples/agents/basic-agent.py`
+3. 웹 UI 실행: `picoagents ui`
 
-Free tier: 60 hours/month
+무료 등급: 월 60시간
 
-### Option 3: Local Installation
+### 옵션 3: 로컬 설치
 
 ```bash
 # Clone the repository
@@ -106,9 +106,9 @@ pip install -e ".[all]"           # Most extras (not persist, otel, dev, framewo
 export OPENAI_API_KEY="your-api-key-here"
 ```
 
-### Quick Start: Your First Agent
+### 빠른 시작: 첫 번째 에이전트
 
-In this book, we will cover the fundamentals of building multi-agent systems, and incrementally build up the `Agents` abstractions shown below:
+이 책에서는 멀티 에이전트 시스템 구축의 기초를 다루며, 아래에 보이는 `Agents` 추상화를 단계적으로 쌓아 올립니다:
 
 ```python
 from picoagents import Agent, OpenAIChatCompletionClient
@@ -130,21 +130,21 @@ response = await agent.run("What's the weather in Paris?")
 print(response.messages[-1].content)
 ```
 
-**Want a simpler starting point?** The [`code_along/`](code_along/) directory builds a minimal agent from zero in four progressive steps: [core agent loop](code_along/ch04_v1_agent.py) → [tool calling](code_along/ch04_v2_tools.py) → [memory](code_along/ch04_v3_memory.py) → [streaming](code_along/ch04_v4_streaming.py). PicoAgents is an expanded, production-ready version of the same ideas.
+**더 단순한 시작점을 원하나요?** [`code_along/`](code_along/) 디렉터리에서는 네 단계를 거쳐 영점에서 최소한의 에이전트를 만듭니다: [핵심 에이전트 루프](code_along/ch04_v1_agent.py) → [도구 호출](code_along/ch04_v2_tools.py) → [메모리](code_along/ch04_v3_memory.py) → [스트리밍](code_along/ch04_v4_streaming.py). PicoAgents는 같은 아이디어를 확장한 운영 준비 버전입니다.
 
-### Model Client Setup
+### 모델 클라이언트 설정
 
-PicoAgents supports multiple LLM providers through a unified interface. Each provider requires minimal setup—just API credentials and switching the client class. Chapter 4 covers building custom model clients for any provider.
+PicoAgents는 통합 인터페이스로 여러 LLM 제공자를 지원합니다. 각 제공자의 설정은 최소한입니다 — API 자격 증명만 준비하고 클라이언트 클래스를 바꾸면 됩니다. 임의의 제공자를 위한 커스텀 모델 클라이언트 구축은 4장에서 다룹니다.
 
-| Provider          | Client Class                                                                             | Setup                                                                                                                                                                              | Example                                                          | Source                                                               |
+| 제공자 | 클라이언트 클래스 | 설정 | 예시 | 소스 |
 | ----------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------- |
-| **OpenAI**        | [`OpenAIChatCompletionClient`](picoagents/src/picoagents/llm/_openai.py)                 | 1. Get API key from [platform.openai.com](https://platform.openai.com)<br>2. `export OPENAI_API_KEY='sk-...'`                                                                      | [`basic-agent.py`](examples/agents/basic-agent.py)               | [`_openai.py`](picoagents/src/picoagents/llm/_openai.py)             |
-| **Azure OpenAI**  | [`AzureOpenAIChatCompletionClient`](picoagents/src/picoagents/llm/_azure_openai.py)      | 1. Deploy model on [Azure Portal](https://portal.azure.com)<br>2. Set endpoint, key, deployment name                                                                               | See [`swe_agent/agent.py`](examples/agents/swe_agent/agent.py)   | [`_azure_openai.py`](picoagents/src/picoagents/llm/_azure_openai.py) |
-| **Anthropic**     | [`AnthropicChatCompletionClient`](picoagents/src/picoagents/llm/_anthropic.py)           | 1. Get API key from [console.anthropic.com](https://console.anthropic.com)<br>2. `export ANTHROPIC_API_KEY='sk-...'`                                                               | [`agent_anthropic.py`](examples/agents/agent_anthropic.py)       | [`_anthropic.py`](picoagents/src/picoagents/llm/_anthropic.py)       |
-| **GitHub Models** | [`OpenAIChatCompletionClient`](picoagents/src/picoagents/llm/_openai.py)<br>+ `base_url` | 1. Get token from [github.com/settings/tokens](https://github.com/settings/tokens)<br>2. `export GITHUB_TOKEN='ghp_...'`<br>3. Set `base_url="https://models.github.ai/inference"` | [`agent_githubmodels.py`](examples/agents/agent_githubmodels.py) | Uses [`_openai.py`](picoagents/src/picoagents/llm/_openai.py)        |
-| **Local/Custom**  | [`OpenAIChatCompletionClient`](picoagents/src/picoagents/llm/_openai.py)<br>+ `base_url` | Point to any OpenAI-compatible endpoint<br>(Ollama, LM Studio, vLLM, etc.)                                                                                                         | Use `base_url="http://localhost:8000"`                           | Uses [`_openai.py`](picoagents/src/picoagents/llm/_openai.py)        |
+| **OpenAI** | [`OpenAIChatCompletionClient`](picoagents/src/picoagents/llm/_openai.py) | 1. [platform.openai.com](https://platform.openai.com)에서 API 키 발급<br>2. `export OPENAI_API_KEY='sk-...'` | [`basic-agent.py`](examples/agents/basic-agent.py) | [`_openai.py`](picoagents/src/picoagents/llm/_openai.py) |
+| **Azure OpenAI** | [`AzureOpenAIChatCompletionClient`](picoagents/src/picoagents/llm/_azure_openai.py) | 1. [Azure Portal](https://portal.azure.com)에 모델 배포<br>2. 엔드포인트, 키, 배포 이름 설정 | [`swe_agent/agent.py`](examples/agents/swe_agent/agent.py) 참고 | [`_azure_openai.py`](picoagents/src/picoagents/llm/_azure_openai.py) |
+| **Anthropic** | [`AnthropicChatCompletionClient`](picoagents/src/picoagents/llm/_anthropic.py) | 1. [console.anthropic.com](https://console.anthropic.com)에서 API 키 발급<br>2. `export ANTHROPIC_API_KEY='sk-...'` | [`agent_anthropic.py`](examples/agents/agent_anthropic.py) | [`_anthropic.py`](picoagents/src/picoagents/llm/_anthropic.py) |
+| **GitHub Models** | [`OpenAIChatCompletionClient`](picoagents/src/picoagents/llm/_openai.py)<br>+ `base_url` | 1. [github.com/settings/tokens](https://github.com/settings/tokens)에서 토큰 발급<br>2. `export GITHUB_TOKEN='ghp_...'`<br>3. `base_url="https://models.github.ai/inference"` 설정 | [`agent_githubmodels.py`](examples/agents/agent_githubmodels.py) | [`_openai.py`](picoagents/src/picoagents/llm/_openai.py) 사용 |
+| **로컬/커스텀** | [`OpenAIChatCompletionClient`](picoagents/src/picoagents/llm/_openai.py)<br>+ `base_url` | 임의의 OpenAI 호환 엔드포인트 지정<br>(Ollama, LM Studio, vLLM 등) | `base_url="http://localhost:8000"` 사용 | [`_openai.py`](picoagents/src/picoagents/llm/_openai.py) 사용 |
 
-**Quick Examples:**
+**간단한 예시:**
 
 ```python
 # OpenAI (default)
@@ -169,7 +169,7 @@ client = OpenAIChatCompletionClient(
 )
 ```
 
-### Launch the Web UI
+### 웹 UI 실행
 
 ![PicoAgents Web UI](./docs/images/picoagents_screenshot.png)
 
@@ -181,13 +181,13 @@ picoagents ui
 picoagents ui --dir ./examples
 ```
 
-The Web UI discovers the agents, orchestrators, and workflows in your codebase and gives you a place to run them: streaming chat, a live debug rail, and recorded run history.
+웹 UI는 코드베이스에서 에이전트, 오케스트레이터, 워크플로를 찾아 이를 실행할 장소를 제공합니다: 스트리밍 채팅, 실시간 디버그 레일, 기록된 실행 이력까지 지원합니다.
 
-It also includes an **MCP Playground** for connecting to MCP servers, invoking their tools, and reading the raw JSON-RPC traffic, plus an **evaluation dashboard** for datasets, targets, and batch runs. Five demo MCP servers ship with the package, covering tools, mid-call input, notifications, interactive UIs, and OAuth-protected access.
+여기에는 MCP 서버에 연결하고, 도구를 호출하고, 원시 JSON-RPC 트래픽을 확인할 수 있는 **MCP Playground**와, 데이터셋, 대상, 배치 실행을 위한 **평가 대시보드**도 포함됩니다. 패키지에는 도구, 호출 중 입력, 알림, 대화형 UI, OAuth 보호 접근을 다루는 5개의 데모 MCP 서버가 기본으로 제공됩니다.
 
-### Run Examples
+### 예시 실행
 
-Examples are now at the root level for easy access:
+예시는 접근하기 쉽도록 루트 레벨에 있습니다:
 
 ```bash
 # Basic agent with tools (Chapter 4)
@@ -204,13 +204,13 @@ python examples/orchestration/ai-driven.py
 python examples/workflows/yc_analysis/workflow.py
 ```
 
-## PicoAgents Framework
+## PicoAgents 프레임워크
 
-This repository is organized into two main components:
+이 저장소는 두 가지 주요 구성으로 나뉩니다:
 
-### 1. Framework Source ([`picoagents/`](picoagents/))
+### 1. 프레임워크 소스 ([`picoagents/`](picoagents/))
 
-Complete multi-agent framework built from scratch:
+처음부터 만든 완전한 멀티 에이전트 프레임워크:
 
 ```
 picoagents/
@@ -255,64 +255,64 @@ examples/
 └── contextengineering/# Production: Context management strategies
 ```
 
-## Key Features
+## 주요 기능
 
-**Production-Ready Patterns**
+**운영 준비 패턴**
 
-Illustrated through real-world case studies (see [YC Analysis workflow](examples/workflows/yc_analysis/)):
+실제 사례 연구로 보여줍니다 ([YC Analysis 워크플로](examples/workflows/yc_analysis/) 참고):
 
-- Cost optimization: Two-stage filtering for 90% LLM cost reduction
-- Type safety: Structured outputs with Pydantic validation
-- Reliability: Checkpointing and resumable workflows
-- Advanced reasoning: Think tool for improved problem-solving (54% performance gain)
+- 비용 최적화: 2단계 필터링으로 LLM 비용 90% 절감
+- 타입 안전성: Pydantic 검증을 갖춘 구조화된 출력
+- 신뢰성: 체크포인트와 재개 가능한 워크플로
+- 고급 추론: 문제 해결을 개선하는 Think 도구 (성능 54% 향상)
 
-**Computer Use Agents**
+**컴퓨터 사용 에이전트**
 
-- Playwright-based browser automation
-- Multimodal reasoning with vision models
-- Built-in tools: navigate, click, type, scroll, extract content
+- Playwright 기반 브라우저 자동화
+- 비전 모델을 활용한 멀티모달 추론
+- 내장 도구: navigate, click, type, scroll, extract content
 
-**Web UI & CLI**
+**웹 UI 및 CLI**
 
-- Auto-discovery of agents, orchestrators, workflows
-- Real-time streaming with Server-Sent Events
-- Session management with conversation history
-- Launch: `picoagents ui`
+- 에이전트, 오케스트레이터, 워크플로 자동 발견
+- Server-Sent Events 기반 실시간 스트리밍
+- 대화 이력을 갖춘 세션 관리
+- 실행: `picoagents ui`
 
-**Evaluation Framework**
+**평가 프레임워크**
 
-- LLM-as-judge evaluation patterns
-- Reference-based validation (exact, fuzzy, contains)
-- Composite scoring with multiple judges
-- Comprehensive metrics collection
+- LLM-as-judge 평가 패턴
+- 기준 기반 검증(정확 일치, 퍼지, 포함)
+- 여러 심사를 조합한 합산 점수
+- 종합적인 지표 수집
 
-## Framework Comparisons
+## 프레임워크 비교
 
-The patterns in PicoAgents transfer well to production frameworks. To demonstrate this, this repo includes equivalent implementations across popular frameworks:
+PicoAgents의 패턴은 실제 운영 프레임워크에도 잘 옮겨집니다. 이를 보여주기 위해 이 저장소에는 주요 프레임워크별 동등 구현이 포함되어 있습니다:
 
-| Framework                                                         | Examples                         | Description                             |
+| 프레임워크 | 예시 | 설명 |
 | ----------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| [Microsoft Agent Framework](examples/frameworks/agent-framework/) | Agents, workflows, orchestration | Microsoft's agent framework             |
-| [Google ADK](examples/frameworks/google-adk/)                     | Agents, workflows, orchestration | Google's Agent Development Kit          |
-| [LangGraph](examples/frameworks/langgraph/)                       | Agents, workflows, orchestration | LangChain's graph-based agent framework |
+| [Microsoft Agent Framework](examples/frameworks/agent-framework/) | 에이전트, 워크플로, 오케스트레이션 | Microsoft의 에이전트 프레임워크 |
+| [Google ADK](examples/frameworks/google-adk/) | 에이전트, 워크플로, 오케스트레이션 | Google의 Agent Development Kit |
+| [LangGraph](examples/frameworks/langgraph/) | 에이전트, 워크플로, 오케스트레이션 | LangChain의 그래프 기반 에이전트 프레임워크 |
 
-These comparisons show that whether you use PicoAgents, LangGraph, or another framework, the core patterns—tool-calling agents, sequential workflows, round-robin orchestration etc —remain the same. Learn the patterns once, apply them anywhere.
+이 비교는 PicoAgents를 쓰든 LangGraph나 다른 프레임워크를 쓰든 — 도구 호출 에이전트, 순차 워크플로, 라운드 로빈 오케스트레이션 같은 — 핵심 패턴은 동일하다는 점을 보여줍니다. 패턴을 한 번 배우면 어디서나 적용할 수 있습니다.
 
-## Get the Book
+## 책 구매
 
 **"Designing Multi-Agent Systems: Principles, Patterns, and Implementation for AI Agents"**
 
-This repository implements every concept from the book. The book provides the theory, design trade-offs, and production considerations you need to build effective multi-agent systems.
+이 저장소는 책의 모든 개념을 구현합니다. 책은 효과적인 멀티 에이전트 시스템 구축에 필요한 이론, 설계 트레이드오프, 운영 고려사항을 제공합니다.
 
-- [Buy Digital Edition](https://buy.multiagentbook.com/?utm_source=github&utm_medium=readme)
-- [Paperback on Amazon](https://www.amazon.com/dp/B0G2BCQQJY)
-- [Hardcover on Amazon](https://www.amazon.com/dp/B0G2F6T2BZ)
+- [전자책 구매](https://buy.multiagentbook.com/?utm_source=github&utm_medium=readme)
+- [Amazon 페이퍼백](https://www.amazon.com/dp/B0G2BCQQJY)
+- [Amazon 하드커버](https://www.amazon.com/dp/B0G2F6T2BZ)
 
-## Questions and Feedback
+## 질문 및 피드백
 
-Questions or feedback about the book or code? Please [open an issue](https://github.com/victordibia/designing-multiagent-systems/issues).
+책이나 코드에 대한 질문이나 피드백이 있으시면 [이슈를 열어](https://github.com/victordibia/designing-multiagent-systems/issues) 주십시오.
 
-## Citation
+## 인용
 
 ```bibtex
 @book{dibia2025multiagent,
