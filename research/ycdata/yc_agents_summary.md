@@ -1,13 +1,13 @@
 
-## Key Findings: YC Agentic Companies (Auto-generated)
+## 주요 발견: YC 에이전틱 기업 (자동 생성)
 
-- **Total companies in raw YC dataset:** 5304
-- **Companies after AI/agent keyword filter:** 1552 (29.3% of raw)
-- **Total agentic companies identified:** 726 (13.7% of raw, 46.8% of AI/agent filtered)
+- **원시 YC 데이터셋의 전체 기업 수:** 5304
+- **AI/에이전트 키워드 필터 후 기업 수:** 1552 (원시의 29.3%)
+- **식별된 전체 에이전틱 기업 수:** 726 (원시의 13.7%, AI/에이전트 필터 대상의 46.8%)
 
-### Year-over-Year Growth of Agentic Companies (2020-2025)
+### 에이전틱 기업의 연도별 성장 (2020-2025)
 
-| Year | Cumulative YC Startups | YC Startups That Year | Cumulative Agentic Companies | Agentic Companies That Year | % Agentic That Year | Cumulative % Growth Agentic |
+| 연도 | 누적 YC 스타트업 | 해당 연도 YC 스타트업 | 누적 에이전틱 기업 | 해당 연도 에이전틱 기업 | 해당 연도 에이전틱 비율 | 누적 에이전틱 성장률 |
 |------|-----------------------|-----------------------|------------------------------|----------------------------|---------------------|----------------------------|
 | 2020 | 2425 | 423 | 67 | 25 | 5.9% | 0.0% |
 | 2021 | 3218 | 793 | 119 | 52 | 6.6% | 77.6% |
@@ -16,199 +16,199 @@
 | 2024 | 5052 | 597 | 598 | 242 | 40.5% | 792.5% |
 | 2025 | 5304 | 252 | 726 | 128 | 50.8% | 983.6% |
 
-- **Top domains:**
+- **주요 도메인:**
 domain
 productivity    266
 software        120
 finance          93
 health           75
 e_commerce       37
-- **Top use cases (subdomains):**
+- **주요 사용 사례 (서브도메인):**
 subdomain
 sales automation               24
 customer support automation    22
 workflow automation            16
 recruitment automation         13
 developer tools                 8
-- **Most common value proposition keywords:** behalf, generative, autonomously, company, agents, tasks, acting, indicating, agent, uses
+- **가장 흔한 가치 제안 키워드:** behalf, generative, autonomously, company, agents, tasks, acting, indicating, agent, uses
 
 **E_Commerce**
-- Anglera: AI-Powered Product Data Enrichment At Anglera, we're developing a suite of AI agents to help e-commerce companies run their operations more efficiently. Our flagship agent helps our customers onboard, enrich, and manage their product data, reducing time per product from 15 mins down to 5 seconds.
+- Anglera: AI 기반 제품 데이터 보강 Anglera에서 당사는 전자상거래 기업이 업무를 더 효율적으로 운영하도록 돕는 AI 에이전트 제품군을 개발하고 있습니다. 주력 에이전트는 고객이 제품 데이터를 온보딩, 보강, 관리하도록 도와 제품당 처리 시간을 15분에서 5초로 줄입니다.
 
-We previously developed ML to automatically enrich millions of products at Uber Eats, and we're now on a mission to automate the most common manual workflows for every e-commerce business.
-  - Value prop: The company develops AI agents that autonomously handle product data onboarding, enrichment, and management for e-commerce businesses, clearly delegating tasks to generative AI agents on behalf of users.
-  - Website: https://www.anglera.com/
-- AI Sell: AI Sales Associate for Ecommerce We're building AI Sales Associates for eCommerce. Imagine going on nike.com and facetiming an AI Lebron James and getting his advice on which his shoes to buy. Traditional brick-and-mortar retail stores rely on sales associates to provide personalized customer service, guide product discovery and close sales, but it's always been too expensive and unscaleable for online stores. We're building video-based AI agents that are experts in their products and can gently steer customers to a purchase, delighting customers and lifting conversion/AOV.
+이전에 Uber Eats에서 수백만 개 제품의 자동 보강을 위한 ML을 개발했으며, 현재는 모든 전자상거래 기업의 가장 흔한 수작업 워크플로를 자동화하는 것을 사명으로 삼고 있습니다.
+  - 가치 제안: 이 회사는 전자상거래 기업을 위해 제품 데이터 온보딩, 보강, 관리를 자율적으로 처리하는 AI 에이전트를 개발하며, 사용자 대신 생성형 AI(generative AI) 에이전트에 작업을 명확히 위임합니다.
+  - 웹사이트: https://www.anglera.com/
+- AI Sell: 전자상거래를 위한 AI 영업 상담원 당사는 전자상거래를 위한 AI 영업 상담원을 만들고 있습니다. nike.com에 접속해 AI LeBron James와 페이스타임하며 어떤 신발을 살지 조언을 받는다고 상상해 보세요. 전통적인 오프라인 소매점은 영업 상담원을 통해 개인화된 고객 서비스를 제공하고 제품 발견을 안내하며 계약을 성사시키지만, 온라인 매장에서는 항상 비용이 너무 많이 들고 확장할 수 없었습니다. 우리는 제품에 정통한 영상 기반 AI 에이전트를 만들어 고객을 구매로 부드럽게 유도하고, 고객에게 만족을 주며 전환율/AOV를 끌어올립니다.
 
-Jerry and Jeffrey are brothers who previously worked together to scale The Coding School to a 6mil+ in revenue. Jerry built software to help run the 50+ Shopify brands that Openstore acquired more profitably and efficiently. He was also an engineer at Flexport and Google.
+Jerry와 Jeffrey는 형제로, 이전에 함께 The Coding School을 매출 600만 달러 이상으로 확장한 경험이 있습니다. Jerry는 Openstore가 인수한 50개 이상의 Shopify 브랜드를 더 수익성 있고 효율적으로 운영하도록 돕는 소프트웨어를 만들었습니다. 또한 Flexport와 Google에서 엔지니어로 일했습니다.
 
-Jeffrey previously worked at DRW as a quant trader, and as an engineer at Facebook, Snowflake and Amazon.
+Jeffrey는 이전에 DRW에서 퀀트 트레이더로, Facebook, Snowflake, Amazon에서 엔지니어로 일했습니다.
 
-  - Value prop: The company builds video-based AI agents that act as sales associates on eCommerce sites, autonomously interacting with customers to provide personalized advice and guide purchases.
-  - Website: https://www.aisell.com
+  - 가치 제안: 이 회사는 전자상거래 사이트에서 영업 상담원 역할을 하는 영상 기반 AI 에이전트를 만들어, 고객과 자율적으로 상호작용하며 개인화된 조언을 제공하고 구매를 안내합니다.
+  - 웹사이트: https://www.aisell.com
 
 **Education**
-- Studdy: An AI math tutor for every student At Studdy, our mission is to unlock the full potential of the next generation by providing a personalized AI tutor for every student.
+- Studdy: 모든 학생을 위한 AI 수학 튜터 Studdy의 사명은 모든 학생에게 개인화된 AI 튜터를 제공해 다음 세대의 잠재력을 완전히 열어 주는 것입니다.
 
-Studdy Buddy is a multilingual tutor that uses AI, as well as advanced speech, text, and image recognition technology to supercharge students' ability to learn new subjects.
+Studdy Buddy는 다국어 튜터로, AI와 첨단 음성·텍스트·이미지 인식 기술을 활용해 학생들이 새로운 과목을 배우는 능력을 비약적으로 높여 줍니다.
 
-We believe that making self-learning as easy as possible for as many students as possible (no matter their cultural, social, or educational background) is the key to unlocking the full potential of students around the world.
+우리는 문화적·사회적·교육적 배경과 관계없이 가능한 한 많은 학생에게 자기 주도 학습을 최대한 쉽게 만드는 것이 전 세계 학생들의 잠재력을 열어 주는 열쇠라고 믿습니다.
 
-We're a passionate team of AI experts, educators, and builders - if you also have a passion for transforming education we'd love to hear from you.
+우리는 AI 전문가, 교육자, 빌더로 구성된 열정적인 팀입니다 - 여러분도 교육을 변화시키는 데 열정이 있다면 연락을 기다립니다.
 
-Shoot us a message at team@studdy.ai!
-  - Value prop: The company provides a personalized AI tutor that interacts with students using speech, text, and image recognition, effectively acting on behalf of the user to facilitate learning, which qualifies as a generative AI agent.
-  - Website: https://www.studdy.ai/
-- Simplifine: AI-Powered Workspace for Research Research workflows are broken, forcing researchers to cobble together disconnected tools for literature review, writing, data analysis, and more—tools not designed for their needs.
+team@studdy.ai로 메시지를 보내 주세요!
+  - 가치 제안: 이 회사는 음성, 텍스트, 이미지 인식으로 학생과 상호작용하는 개인화된 AI 튜터를 제공하며, 효과적으로 사용자 대신 학습을 돕기 위해 작동하므로 생성형 AI 에이전트에 해당합니다.
+  - 웹사이트: https://www.studdy.ai/
+- Simplifine: 연구용 AI 기반 워크스페이스 연구 워크플로는 망가져 있습니다. 연구자들은 문헌 검토, 글쓰기, 데이터 분석 등에 서로 단절된 도구를 짜 맞춰 써야 하며, 그 도구들은 연구자의 요구에 맞춰 설계되지 않았습니다.
 
-Simplifine changes everything. Built by researchers, for researchers, it equips you with AI agents that act like JARVIS from Iron Man, capable not only of connecting and analyzing information but also running computational experiments and simulations. Our specialized LLM Agents can design and execute complex research experiments with PhD-level expertise, compressing weeks of work into minutes. With Simplifine, you no longer need to juggle fragmented tools—everything from advanced simulations to data analysis happens in one place.
-  - Value prop: The company provides AI agents that autonomously perform complex research tasks such as designing and executing experiments, running simulations, and analyzing data on behalf of researchers, indicating generative AI agents acting on the user's behalf.
-  - Website: https://www.simplifine.com
+Simplifine이 모든 것을 바꿉니다. 연구자가 연구자를 위해 만든 Simplifine은 Iron Man의 JARVIS처럼 작동하는 AI 에이전트를 제공합니다. 정보를 연결하고 분석하는 것은 물론 계산 실험과 시뮬레이션까지 수행할 수 있습니다. 당사의 전문화된 LLM 에이전트는 PhD 수준의 전문 지식으로 복잡한 연구 실험을 설계하고 실행해 몇 주치 작업을 몇 분으로 압축합니다. Simplifine을 쓰면 파편화된 도구를 옮길 필요 없이—고급 시뮬레이션부터 데이터 분석까지—모든 것이 한 곳에서 이루어집니다.
+  - 가치 제안: 이 회사는 연구자를 대신해 실험 설계 및 실행, 시뮬레이션 수행, 데이터 분석 같은 복잡한 연구 작업을 자율적으로 수행하는 AI 에이전트를 제공하며, 이는 사용자 대신 작동하는 생성형 AI 에이전트를 나타냅니다.
+  - 웹사이트: https://www.simplifine.com
 
 **Finance**
-- Strada: Phone AI agents for insurance Strada's AI voice agents handle calls 24/7 for insurance brokers, agencies, and MGAs.
-  - Value prop: The company provides AI voice agents that autonomously handle calls for insurance brokers and agencies, indicating generative AI agents acting on users' behalf in the insurance domain.
-  - Website: https://www.getstrada.com/
-- dili: Automating PWA Compliance and Diligence Dili (YC S23) is building the most reliable AI workforce for diligence on high-stakes deals. Across tax credit diligence, real estate loan & lease abstraction, private equity and private credit, Dili has run diligence for leading firms on 3000+ high-stakes deals to provide instant diligence reports and red flags.
+- Strada: 보험을 위한 전화 AI 에이전트 Strada의 AI 음성 에이전트는 보험 브로커, 대리점, MGA를 위해 24/7로 전화를 처리합니다.
+  - 가치 제안: 이 회사는 보험 브로커와 대리점을 위해 자율적으로 전화를 처리하는 AI 음성 에이전트를 제공하며, 보험 도메인에서 사용자 대신 작동하는 생성형 AI 에이전트를 나타냅니다.
+  - 웹사이트: https://www.getstrada.com/
+- dili: PWA 컴플라이언스와 딜리전스 자동화 Dili (YC S23)은 고위험 딜에 대한 딜리전스 실사를 위해 가장 신뢰할 수 있는 AI 워크포스를 구축하고 있습니다. 세금 크레딧 실사, 부동산 대출·리스 추상화, 사모펀드와 프라이빗 크레딧에 걸쳐 Dili는 주요 기업들을 위해 3000건 이상의 고위험 딜 실사를 수행해 즉각적인 실사 보고서와 경고(red flag)를 제공합니다.
 
-today’s AI models are not accurate enough for mission-critical use cases like underwriting $60M+ tax credit transactions, $100M+ loan & lease abstraction, deal screening and drafting investment memos. Dili is built to be the most reliable automated platform that provides confidence scores on every output so you know when something needs your attention.
+오늘날의 AI 모델은 6000만 달러 이상의 세금 크레딧 거래 언더라이팅, 1억 달러 이상의 대출·리스 추상화, 딜 스크리닝, 투자 메모 작성 같은 미션 크리티컬 사용 사례에는 충분히 정확하지 않습니다. Dili는 모든 출력에 신뢰도 점수를 제공해 무엇에 주의가 필요한지 알 수 있도록, 가장 신뢰할 수 있는 자동화 플랫폼으로 구축되었습니다.
 
-Firms can now tune Dili using their domain-specific knowledge and instructions to fit their custom templates, reports and SOPs. Dili has found and fixed critical red flags and human errors on several multi-million dollar transactions using this fine-tuned expertise.
-  - Value prop: Dili uses generative AI models to autonomously perform high-stakes financial diligence tasks such as tax credit diligence, loan and lease abstraction, and deal screening, providing automated reports and red flags on behalf of users.
-  - Website: https://www.dili.ai
+기업들은 이제 자신의 도메인 특화 지식과 지침으로 Dili를 조정해 자체 템플릿, 보고서, SOP에 맞출 수 있습니다. Dili는 이렇게 파인 튜닝된 전문 지식을 사용해 여러 건의 수백만 달러 규모 거래에서 중대한 경고와 휴먼 에러를 찾아 수정했습니다.
+  - 가치 제안: Dili는 생성형 AI 모델을 사용해 세금 크레딧 실사, 대출·리스 추상화, 딜 스크리닝 같은 고위험 금융 실사 작업을 자율적으로 수행하고, 사용자 대신 자동화된 보고서와 경고를 제공합니다.
+  - 웹사이트: https://www.dili.ai
 
 **Government**
-- Odo: Help companies find and win government contracts with AI State and local governments buy $1.5TN worth of products and services from companies every year. However, the process of finding and winning government contracts is extremely fragmented, non-standardized, and time consuming today.
+- Odo: AI로 기업이 정부 계약을 찾고 수주하도록 지원 주·지방 정부는 매년 기업으로부터 1조 5000억 달러어치의 제품과 서비스를 구매합니다. 그러나 정부 계약을 찾고 수주하는 과정은 오늘날 극도로 파편화되고 비표준적이며 시간 소모가 큽니다.
 
-Odo is the first AI-powered platform to help companies win state and local government contracts. Odo can find relevant contracts, draft proposals, and analyze why companies won or lost through public records sourcing. Our customers have saved up to 80% of time drafting proposals and increased their win rates.
-  - Value prop: The platform uses AI to autonomously find relevant contracts, draft proposals, and analyze outcomes on behalf of companies, indicating generative AI agents acting on users' behalf.
-  - Website: https://www.odo.do/
-- Offstream: Vanta for carbon compliance Offstream is Vanta for carbon compliance. 
+Odo는 기업이 주·지방 정부 계약을 수주하도록 돕는 최초의 AI 기반 플랫폼입니다. Odo는 관련 계약을 찾고, 제안서를 작성하고, 공공 기록 소싱을 통해 기업이 왜 따내거나 실패했는지 분석할 수 있습니다. 고객들은 제안서 작성 시간을 최대 80% 절약하고 수주율을 높였습니다.
+  - 가치 제안: 이 플랫폼은 AI를 사용해 기업을 대신해 관련 계약 탐색, 제안서 작성, 결과 분석을 자율적으로 수행하며, 사용자 대신 작동하는 생성형 AI 에이전트를 나타냅니다.
+  - 웹사이트: https://www.odo.do/
+- Offstream: 탄소 컴플라이언스 분야의 Vanta Offstream은 탄소 컴플라이언스 분야의 Vanta입니다. 
 
-Today, every new infrastructure project, from data centers to biomass power plants has a complicated mess of local, state, federal, and private sector standards that they must understand and comply with to make their projects profitable.
+오늘날 데이터 센터부터 바이오매스 발전소까지 모든 신규 인프라 프로젝트는 프로젝트를 수익성 있게 진행하기 위해 이해하고 준수해야 하는 복잡하게 얽힌 지역·주·연방·민간 부문 표준을 가지고 있습니다.
 
-Offstream solves this by using LLMs to parse regulations, generate technical reports for customers, and manage 100,000+ operational data points on project’s lifecycles. We cut the time customers spend on compliance by 90% and at 1/5th of the cost of alternatives.
-  - Value prop: The company uses large language models (LLMs) to autonomously parse regulations, generate reports, and manage operational data on behalf of users, effectively acting as a generative AI agent to handle compliance tasks.
-  - Website: https://www.useoffstream.com/
+Offstream은 LLM으로 규제를 분석하고, 고객용 기술 보고서를 생성하고, 프로젝트 생애주기의 10만 개 이상 운영 데이터 포인트를 관리해 이 문제를 해결합니다. 우리는 고객의 컴플라이언스 소요 시간을 90% 줄이고 대안 대비 1/5 비용으로 제공합니다.
+  - 가치 제안: 이 회사는 대규모 언어 모델(LLM)을 사용해 사용자 대신 자율적으로 규제를 분석하고, 보고서를 생성하고, 운영 데이터를 관리하며, 컴플라이언스 작업을 처리하는 생성형 AI 에이전트 역할에 효과적으로 나서고 있습니다.
+  - 웹사이트: https://www.useoffstream.com/
 
 **Health**
-- Simbie AI: Clinically-intellignet AI Voice Agents for Healthcare 
-  - Value prop: The company provides clinically-intelligent AI voice agents that act on behalf of users in healthcare settings, indicating generative AI agents delegated to address tasks.
-  - Website: http://www.simbie.ai
-- Wattson Health: AI Voice and SMS Agents for Healthcare Wattson Health’s AI agents connect with customers over the phone and SMS. Give us your busiest tasks and we’ll train our agents to take them off your hands.
-  - Value prop: The company provides AI agents that autonomously handle tasks via voice and SMS in healthcare, clearly delegating tasks to generative AI agents on the user's behalf.
-  - Website: https://www.wattsonhealth.com
+- Simbie AI: 헬스케어용 임상적으로 지능적인 AI 음성 에이전트 
+  - 가치 제안: 이 회사는 헬스케어 현장에서 사용자 대신 작동하는 임상적으로 지능적인 AI 음성 에이전트를 제공하며, 작업 대응이 위임된 생성형 AI 에이전트를 나타냅니다.
+  - 웹사이트: http://www.simbie.ai
+- Wattson Health: 헬스케어용 AI 음성 및 SMS 에이전트 Wattson Health의 AI 에이전트는 전화와 SMS로 고객과 연결됩니다. 가장 바쁜 작업을 맡기면 에이전트를 교육해 여러분의 손에서 덜어 내겠습니다.
+  - 가치 제안: 이 회사는 헬스케어에서 음성 및 SMS로 작업을 자율적으로 처리하는 AI 에이전트를 제공하며, 사용자 대신 생성형 AI 에이전트에 작업을 명확히 위임합니다.
+  - 웹사이트: https://www.wattsonhealth.com
 
 **Legal**
-- Pincites: Close deals faster with AI for contract negotiation Pincites makes contract negotiations faster and more consistent for legal teams. Using LLMs, Pincites takes a first pass at reviewing contracts, helping lawyers focus on riskiest parts of their negotiations.
-  - Value prop: The company uses large language models to autonomously review contracts and assist legal teams by taking a first pass, effectively acting on behalf of users to address negotiation tasks.
-  - Website: https://www.pincites.com/
-- Solve Intelligence: AI patent drafting, prosecution, harvesting and more for legal teams. We provide an in-browser document editor that any patent attorney can start using straight away. It works just like Google Docs but, under the hood, is powered by an AI copilot to help the attorney draft, prosecute, and harvest high-quality patents efficiently.
+- Pincites: AI로 계약 협상을 더 빨리, 딜을 성사시키다 Pincites는 법률 팀의 계약 협상을 더 빠르게, 더 일관되게 만듭니다. Pincites는 LLM을 사용해 계약서 검토의 초벌 작업을 수행하고, 변호사가 협상에서 가장 위험한 부분에 집중하도록 돕습니다.
+  - 가치 제안: 이 회사는 대규모 언어 모델을 사용해 자율적으로 계약을 검토하고 초벌 작업을 수행함으로써 법률 팀을 지원하며, 효과적으로 사용자 대신 협상 작업을 처리합니다.
+  - 웹사이트: https://www.pincites.com/
+- Solve Intelligence: 법률 팀을 위한 AI 특허 작성, 심사 대응, 특허 수집 등 어떤 특허 변호사든 바로 사용할 수 있는 브라우저 내 문서 편집기를 제공합니다. 겉보기에는 Google Docs와 똑같이 작동하지만, 내부에서는 AI 코파일럿이 변호사가 고품질 특허를 효율적으로 작성·심사 대응하고 특허를 수집하도록 돕습니다.
 
-Our product can help with all stages of the patent life cycle, from drafting and filing to prosecution and opposition.
-  - Value prop: The product uses a generative AI copilot that assists patent attorneys by drafting, prosecuting, and managing patents on their behalf, indicating delegation of tasks to a generative AI agent.
-  - Website: https://www.solveintelligence.com/
+저희 제품은 작성과 출원부터 심사 대응과 이의 제기까지 특허 수명주기의 모든 단계를 도울 수 있습니다.
+  - 가치 제안: 이 제품은 특허 변호사를 대신해 특허 작성, 심사 대응, 관리를 지원하는 생성형 AI 코파일럿을 활용하며, 생성형 AI 에이전트에 작업이 위임되는 것을 나타냅니다.
+  - 웹사이트: https://www.solveintelligence.com/
 
 **Manufacturing**
-- Maive: Visual AI for factories Maive automates aerospace compliance paperwork required on the manufacturing shop floor. We use cameras and AI to automatically fill federally-required paperwork, reducing the risk of companies being unable to sell their products and increasing factory throughput.
+- Maive: 공장을 위한 비전(Vision) AI Maive는 제조 현장(shop floor)에서 요구되는 우주항공 컴플라이언스 서류를 자동화합니다. 우리는 카메라와 AI로 연방 정부가 요구하는 서류를 자동으로 작성해, 기업이 제품을 판매하지 못하게 될 위험을 줄이고 공장 처리량을 높입니다.
 
-Users have told us the paperwork required for the F-35 fighter jet weighs more than the jet itself! The government requires a record for each of the 1.5 million parts in the jet, including what shop-floor workers do to each part and when they do it.
+사용자들은 F-35 전투기에 필요한 서류가 전투기보다 더 무겁다고 말합니다! 정부는 이 비행기의 150만 개 부품 각각에 대해, 현장 작업자가 각 부품에 무엇을 언제 했는지를 포함한 기록을 요구합니다.
 
-Automating paperwork by interpreting human actions with cameras is hard. Doing this at the edge and inside secure aerospace environments is harder. We fine-tune the latest vision language models to solve what was previously impossible.
+카메라로 인간의 행동을 해석해 서류를 자동화하는 것은 어렵습니다. 그것을 엣지에서, 보안이 유지되는 우주항공 환경 안에서 하는 것은 더 어렵습니다. 우리는 최신 비전 언어 모델을 파인 튜닝해 이전까지 불가능했던 문제를 해결합니다.
 
-Manufacturers lose millions when compliance paperwork has errors because it can freeze their ability to sell the product for months. Leaving this task to shop floor workers is both incredibly risky to the company and tedious for the employees. 
+컴플라이언스 서류에 오류가 있으면 제품 판매가 수개월간 동결될 수 있어 제조사는 수백만 달러를 잃습니다. 이 작업을 현장 작업자에게 맡기는 것은 회사에 극도로 위험할 뿐 아니라 직원에게도 지루한 일입니다. 
 
-Compliance paperwork is just the beginning. We want to propel American manufacturing into the AI era. America is facing a serious problem: there’s $400B being invested to onshore manufacturing, but there’s simultaneously a projected 15% gap in workers needed due to an aging workforce. We’re on a mission to solve this by building the first AI native software for the shop floor. Our vision is to intelligently connect people, robots, and data to 10x today’s manufacturing capacity.
-  - Value prop: The company uses AI models to autonomously interpret human actions via cameras and automatically fill compliance paperwork on behalf of users, effectively acting as a generative AI agent delegated to handle this task.
-  - Website: https://maive.ai
+컴플라이언스 서류는 시작일 뿐입니다. 우리는 미국 제조업을 AI 시대로 밀어붙이고자 합니다. 미국은 심각한 문제에 직면해 있습니다: 제조업 자국 회귀(onshoring)에 4000억 달러가 투입되고 있지만, 동시에 노동력 고령화로 필요한 인력의 15%가 부족할 것으로 예상됩니다. 우리는 현장을 위한 최초의 AI 네이티브 소프트웨어를 만들어 이 문제를 해결하겠다는 사명감을 갖고 있습니다. 우리의 비전은 사람, 로봇, 데이터를 지능적으로 연결해 현재의 제조 역량을 10배로 만드는 것입니다.
+  - 가치 제안: 이 회사는 AI 모델을 사용해 카메라로 인간의 행동을 자율적으로 해석하고 사용자 대신 컴플라이언스 서류를 자동 작성하며, 이 작업을 위임받은 생성형 AI 에이전트 역할에 효과적으로 나서고 있습니다.
+  - 웹사이트: https://maive.ai
 
 **Media**
-- AIVideo.com: The all in one tool for AI powered video production We built an AI agent to create professional quality videos for 1% of the time and cost of traditional video production. Our AI agent orchestrates the creation of complete videos (script, visuals, VoiceOver, effects, etc.) by utilizing dozens of task-specific AI models in a single workflow. 
-  - Value prop: The company uses a generative AI agent that autonomously orchestrates multiple AI models to create complete videos on behalf of the user, demonstrating delegation of tasks typical of generative AI agents.
-  - Website: https://aivideo.com
-- Subsets: AI-driven Retention Automation for subscription media businesses. Subsets is the leading AI-driven retention automation platform purpose-built for commercial teams in subscription businesses.
+- AIVideo.com: AI 기반 영상 제작을 위한 올인원 도구 우리는 전통적 영상 제작 시간과 비용의 1%로 전문가 품질의 영상을 만드는 AI 에이전트를 만들었습니다. 저희 AI 에이전트는 수십 개의 작업 특화 AI 모델을 단일 워크플로에서 활용하여 완성 영상(대본, 비주얼, VoiceOver, 효과 등)의 제작을 조율합니다. 
+  - 가치 제안: 이 회사는 사용자 대신 여러 AI 모델을 자율적으로 조율해 완성 영상을 제작하는 생성형 AI 에이전트를 사용하며, 이는 생성형 AI 에이전트의 전형적인 작업 위임을 보여 줍니다.
+  - 웹사이트: https://aivideo.com
+- Subsets: 구독형 미디어 기업을 위한 AI 기반 리텐션 자동화 Subsets는 구독형 기업의 상업 팀을 위해 특화 구축된 선도적인 AI 기반 리텐션 자동화 플랫폼입니다.
 
-Subscription media companies like Daily Mail, McClatchy, and TuneIn use Subsets to predict churn, experiment with retention strategies, and confidently automate what works to drive engagement and retention.
+Daily Mail, McClatchy, TuneIn 같은 구독형 미디어 기업은 Subsets를 사용해 이탈(churn)을 예측하고, 리텐션 전략을 실험하며, 효과적인 방식을 자신 있게 자동화해 참여와 리텐션을 끌어냅니다.
 
-Launched out of Y Combinator’s 2023 Summer batch in San Francisco, Subsets is building the AI-driven retention platform for subscription businesses focused on sustainable growth and profitability.
-  - Value prop: The platform uses AI to automate retention strategies on behalf of commercial teams, indicating delegation of tasks to a generative AI agent to drive engagement and retention in subscription media businesses.
-  - Website: https://www.subsets.com
+2023년 여름 샌프란시스코의 Y Combinator 배치로 설립된 Subsets는 지속 가능한 성장과 수익성에 집중하는 구독형 기업을 위한 AI 기반 리텐션 플랫폼을 구축하고 있습니다.
+  - 가치 제안: 이 플랫폼은 AI를 사용해 상업 팀을 대신해 리텐션 전략을 자동화하며, 구독형 미디어 기업의 참여와 리텐션을 끌어내기 위해 생성형 AI 에이전트에 작업을 위임하는 것을 나타냅니다.
+  - 웹사이트: https://www.subsets.com
 
 **Other**
-- SchemeFlow: AI Report Generation for Engineering & Environmental Review SchemeFlow uses AI to generate technical reports for engineering and environmental review  for construction projects.
+- SchemeFlow: 엔지니어링·환경 검토를 위한 AI 보고서 생성 SchemeFlow는 AI를 사용해 건설 프로젝트의 엔지니어링·환경 검토용 기술 보고서를 생성합니다.
 
-Two brothers + high school friend, with great combo of skills: Mayor’s Chief of Staff, Arup construction engineer + AI software engineer.
+두 형제 + 고교 친구로, 훌륭한 조합의 기술을 갖췄습니다: 시장의 비서실장, Arup 건설 엔지니어 + AI 소프트웨어 엔지니어.
 
-LLMs allow fast generation of reports & handling local regulatory complexity which wasn’t feasible before.
+LLM 덕분에 이전에는 실행 불가능했던 보고서의 빠른 생성과 지역 규제 복잡성 처리가 가능합니다.
 
-Already generated over 30,000 pages of technical reports for over 1,100 construction projects, from car parks to hotels, housing to office buildings.
+이미 주차장부터 호텔까지, 주택부터 사무용 빌딩까지 1100개 이상의 건설 프로젝트를 위해 3만 페이지가 넘는 기술 보고서를 생성했습니다.
 
-Working across Transportation, Air Quality, Noise, Flood Risk, Environmental review in the US and the UK, with major engineering companies such as Stantec, Buro Happold and Royal Haskoning.
+미국과 영국에서 Stantec, Buro Happold, Royal Haskoning 같은 주요 엔지니어링 기업들과 함께 교통, 대기 질, 소음, 홍수 위험, 환경 검토를 다루고 있습니다.
 
-$9B US opportunity (143k consultants x $64k/yr report-writing work), $23B worldwide.
+$9B 규모 미국 기회 (컨설턴트 143k명 x 연 $64k 보고서 작성 업무), 전 세계 $23B.
 
 www.schemeflow.com
-  - Value prop: The company uses LLMs to autonomously generate technical reports for engineering and environmental reviews, effectively delegating the task of report writing to generative AI agents on behalf of users.
-  - Website: https://www.schemeflow.com
-- Superunit: Faster, more profitable background checks with AI Superunit deploys AI voice and email agents to complete employment verifications for background check companies—faster, cheaper, and more compliant than internal teams or outsourced call centers.
+  - 가치 제안: 이 회사는 LLM을 사용해 엔지니어링·환경 검토용 기술 보고서를 자율적으로 생성하며, 효과적으로 사용자 대신 보고서 작성 작업을 생성형 AI 에이전트에 위임합니다.
+  - 웹사이트: https://www.schemeflow.com
+- Superunit: AI로 더 빠르고 수익성 있는 신원 조회 Superunit은 신원 조회 기업을 위해 고용 검증을 완수하는 AI 음성·이메일 에이전트를 투입합니다—자체 팀이나 아웃소싱 콜센터보다 더 빠르게, 더 저렴하게, 더 잘 컴플라이언스를 지키면서.
 
-Our agents call and email employers, collect verification data, and log every interaction for audit and compliance. Customers are replacing manual workflows with Superunit to scale without adding headcount or compromising quality.
+저희 에이전트는 고용주에게 전화하고 이메일을 보내 검증 데이터를 수집하고, 감사와 컴플라이언스를 위한 모든 상호작용을 기록합니다. 고객들은 Superunit으로 수작업 워크플로를 대체해 인력 증원이나 품질 저하 없이 확장하고 있습니다.
 
-We work with several background screening organizations and are processing thousands of verifications per month.
-  - Value prop: The company deploys AI voice and email agents that autonomously perform employment verifications by calling and emailing employers, acting on behalf of users to complete tasks, which fits the definition of generative AI agents.
-  - Website: http://superunit.ai
+저희는 여러 신원 조회 기관과 협력하며 월 수천 건의 검증을 처리하고 있습니다.
+  - 가치 제안: 이 회사는 고용주에게 전화하고 이메일을 보내 고용 검증을 자율적으로 수행하는 AI 음성·이메일 에이전트를 배치하며, 사용자 대신 작업을 완수하므로 생성형 AI 에이전트의 정의에 부합합니다.
+  - 웹사이트: http://superunit.ai
 
 **Productivity**
-- Minded: AI support agents to solve the tickets that reach humans We are helping CX teams reduce ticket volumes by 50-70%, by training AI Agents from the best human agents. We seamlessly connect to their CRM, help center and backoffice to train human-level agents.
-  - Value prop: The company provides AI support agents that autonomously handle customer tickets by learning from human agents and integrating with CRM and help desk systems, clearly indicating generative AI agents acting on users' behalf.
-  - Website: https://www.minded.com/
-- Fiber AI: We automate SDR / BDR prospecting & outbound sales workflows using AI Fiber AI automates SDR and BDR prospecting & outbound sales workflows using AI. Enterprises choose our AI sales platform because we automatically find prospects, research them, and hyper-personalize outbound messages that get 80% open rates, which is 4x the industry standard (our AISDR / AIBDR platform 2-4x's the reply rates you are currently getting).
+- Minded: 사람에게까지 도달하는 티켓을 해결하는 AI 지원 에이전트 우리는 최고의 인간 상담원으로부터 AI 에이전트를 교육해 CX 팀의 티켓 볼륨을 50-70% 줄이는 것을 돕고 있습니다. CRM, 헬프센터, 백오피스에 매끄럽게 연결해 인간 수준의 에이전트를 교육합니다.
+  - 가치 제안: 이 회사는 인간 상담원으로부터 학습하고 CRM 및 헬프데스크 시스템과 통합해 고객 티켓을 자율적으로 처리하는 AI 지원 에이전트를 제공하며, 사용자 대신 작동하는 생성형 AI 에이전트를 명확히 나타냅니다.
+  - 웹사이트: https://www.minded.com/
+- Fiber AI: AI로 SDR / BDR 영업 발굴 및 아웃바운드 영업 워크플로 자동화 Fiber AI는 AI로 SDR과 BDR의 영업 발굴 및 아웃바운드 영업 워크플로를 자동화합니다. 기업들이 저희 AI 영업 플랫폼을 선택하는 이유는 잠재고객을 자동으로 찾고 조사하며, 업계 표준의 4배인 80% 오픈율을 기록하는 초개인화된 아웃바운드 메시지를 만들기 때문입니다(저희 AISDR / AIBDR 플랫폼은 현재 얻고 계신 회신율을 2-4배로 높여 줍니다).
 
 
-Our AI sales platform consists of 3 core components:
+저희 AI 영업 플랫폼은 3가지 핵심 구성요소로 이루어집니다:
 
-First, Fiber AI manages domain and email health to achieve 80% open rates. We configure cold email infrastructure to maximize email deliverability. Our product will automatically configure your DNS records, warm up your emails (email warmup), orchestrate emails to send optimally across all your accounts, run multi-layer email bounce detection (email waterfall), and modify each outgoing cold outreach to ensure your cold outbound sales emails don't trigger spam filters.
-
-
-Second, we automate sales lead generation with dynamic audiences (AI powered sales assistant, AI based SDR). We have B2B company data on 60 million B2B companies and 800 million B2B contacts, sourced from dozens of data providers (i.e. think sources like BuiltWith, Crunchbase, LinkedIn, ZoomInfo, SemRush, Apollo data, and more). This allows you to precisely segment your audience by the companies you care about and exclude everyone else. Our audiences are dynamic (i.e., account based marketing, account based sales, ABM), meaning we continuously look for prospects matching your targeting criteria and add them to your audience to run our automated outbound sales sequences. This automates manual workflows you might be running on platforms like Clay or Persana. You can also create an audience once based on intent signals (i.e., GTM or go-to-market signals, sales intelligence) and put your outreach on autopilot.
+첫째, Fiber AI는 도메인과 이메일 건강도를 관리해 80% 오픈율을 달성합니다. 우리는 콜드 이메일 인프라를 설정해 이메일 도달률(deliverability)을 극대화합니다. 저희 제품은 DNS 레코드를 자동으로 설정하고, 이메일을 워밍업하고(email warmup), 모든 계정에 걸쳐 이메일 발송을 최적 상태로 조율하고, 다층 이메일 반송 감지를 실행하고(email waterfall), 모든 아웃바운드 콜드 outreach 이메일이 스팸 필터에 걸리지 않도록 각각을 수정합니다.
 
 
-Lastly, our AI sales copilot (AI sales agent, AI based BDR) enables AI powered hyper-personalized emails that boost response rates. The biggest debate in sales is choosing between relevancy and personalization—now you don’t have to. We search far and wide to find the “golden nugget” of information to connect with your prospect, and then use GPT-4 to write hyper personalized email sequences that dramatically increase reply rates and book meetings.
+둘째, 동적 오디언스로 영업 리드 생성을 자동화합니다 (AI 기반 영업 어시스턴트, AI 기반 SDR). 당사는 수십 개 데이터 공급업체(예: BuiltWith, Crunchbase, LinkedIn, ZoomInfo, SemRush, Apollo data 등)에서 수집한 6000만 개 B2B 기업과 8억 명 B2B 연락처에 대한 B2B 기업 데이터를 보유하고 있습니다. 이를 통해 관심 있는 기업으로 오디언스를 정확히 세분화하고 나머지는 모두 제외할 수 있습니다. 저희 오디언스는 동적이며 (예: 계정 기반 마케팅, 계정 기반 영업, ABM), 타겟팅 기준에 맞는 잠재고객을 지속적으로 찾아 오디언스에 추가해 자동화된 아웃바운드 영업 시퀀스를 실행합니다. 이는 Clay나 Persana 같은 플랫폼에서 하던 수작업 워크플로를 자동화합니다. 또한 의도 신호(예: GTM 또는 go-to-market 신호, 영업 인텔리전스)를 기반으로 오디언스를 한 번만 만들어 outreach를 오토파일럿으로 둘 수도 있습니다.
 
 
-Because of these core differences, we stand out from competitors. Products like apollo io have poor email deliverability rates that ruin email health long-term. Existing email outbound tools like amplemarket, reply io, marketo, and outreach io don't scale well and restrict you to small volumes of outbound emails. AI features to autopilot campaigns are missing in products like smartlead ai, instantly, unify gtm, penguin ai, and warmly ai. Currently, our philosophy is to allow AI to 100-1000x your team's output while maintaining extremely high email quality. AI sales copilots like reggie ai, aisdr, artisan ai / artisan sdr / artisan bdr, and others let gpt use AI to generate the entire email, which results in poor outbound email quality since SDRs/BDRs don't have fine-tune controls on the personalization.
-  - Value prop: The company uses generative AI models (GPT-4) to autonomously generate hyper-personalized outbound sales emails and automate prospecting and lead generation workflows, effectively acting as AI sales agents on behalf of users.
-  - Website: https://fiber.ai/
+마지막으로, 저희 AI 영업 코파일럿 (AI 영업 에이전트, AI 기반 BDR)은 응답률을 끌어올리는 AI 기반 초개인화된 이메일을 가능하게 합니다. 영업에서 가장 큰 논쟁은 관련성과 개인화 중 무엇을 택할지가 문제인데—이제 선택할 필요가 없습니다. 당사는 잠재고객과 연결될 '황금 정보(golden nugget)'를 찾아내기 위해 샅샅이 탐색하고, GPT-4로 응답률을 극적으로 높이고 미팅을 예약시키는 초개인화된 이메일 시퀀스를 작성합니다.
+
+
+이런 근본적 차이 덕분에 우리는 경쟁사와 차별화됩니다. apollo io 같은 제품은 이메일 도달률이 나빠 장기적으로 이메일 건강도를 망칩니다. amplemarket, reply io, marketo, outreach io 같은 기존 이메일 아웃바운드 도구는 확장이 잘 안 되고 소량의 아웃바운드 이메일로 제한됩니다. smartlead ai, instantly, unify gtm, penguin ai, warmly ai 같은 제품에는 캠페인을 오토파일럿으로 돌리는 AI 기능이 빠져 있습니다. 현재 우리의 철학은 AI로 팀의 산출량을 100-1000배 늘리면서도 매우 높은 이메일 품질을 유지하는 것입니다. reggie ai, aisdr, artisan ai / artisan sdr / artisan bdr 같은 AI 영업 코파일럿은 GPT에게 AI로 이메일 전체를 생성하게 두는데, SDR/BDR이 개인화에 파인 튜닝 제어 수단을 갖지 못해 아웃바운드 이메일 품질이 나빠집니다.
+  - 가치 제안: 이 회사는 생성형 AI 모델(GPT-4)을 사용해 초개인화된 아웃바운드 영업 이메일을 자율적으로 생성하고 영업 발굴·리드 생성 워크플로를 자동화하며, 효과적으로 사용자 대신 AI 영업 에이전트 역할을 합니다.
+  - 웹사이트: https://fiber.ai/
 
 **Real_Estate**
-- PropRise: AI Investment Analyst for Commercial Real Estate PropRise is an AI-powered investment analyst for commercial real estate, transforming how firms discover and evaluate opportunities. Our platform acts as a 24/7 analyst that finds hidden deals others miss by analyzing vast amounts of data beyond traditional listings - from local council meetings and permits to community sentiment and market trends. While most firms only see surface-level data like basic financials and broker listings, PropRise connects complex patterns across tech company expansions, local market shifts, and city development plans to identify overlooked opportunities.
-  - Value prop: The platform acts as a 24/7 AI investment analyst that autonomously analyzes diverse data sources to discover and evaluate commercial real estate opportunities on behalf of users, indicating generative AI agent functionality.
-  - Website: https://www.proprise.ai/
-- Henry: Automating Deal Decks for Commercial Real Estate Brokers Henry is an AI copilot for commercial real estate (CRE) brokers that seamlessly integrates a brokerage’s internal data set with external sources to generate custom presentations and financial modeling for deals. Our mission is to help CRE brokers close more deals faster, earning more while doing less repetitive work. We’re initially focusing on enabling brokers to generate deal decks in seconds—a task that typically consumes 20+ hours a week across multiple departments within a brokerage.
-  - Value prop: The company uses an AI copilot that integrates data and autonomously generates custom presentations and financial models for brokers, acting on their behalf to complete tasks.
-  - Website: http://www.henry.ai
+- PropRise: 상업용 부동산을 위한 AI 투자 분석가 PropRise는 상업용 부동산을 위한 AI 기반 투자 분석가로, 기업이 기회를 발견하고 평가하는 방식을 바꾸고 있습니다. 저희 플랫폼은 전통적인 매물 목록 너머의 방대한 데이터를 분석해 다른 이들이 놓치는 숨겨진 딜을 찾아내는 24/7 분석가 역할을 합니다 - 지역 의회 회의와 인허가부터 커뮤니티 정서와 시장 동향까지. 대부분의 기업은 기초 재무 자료와 브로커 매물 같은 표면적 데이터만 보는 반면, PropRise는 테크 기업 확장, 지역 시장 변화, 도시 개발 계획 전반의 복잡한 패턴을 연결해 간과된 기회를 식별합니다.
+  - 가치 제안: 이 플랫폼은 24/7 AI 투자 분석가로서 다양한 데이터 소스를 자율적으로 분석해 사용자 대신 상업용 부동산 기회를 발견하고 평가하며, 생성형 AI 에이전트 기능을 나타냅니다.
+  - 웹사이트: https://www.proprise.ai/
+- Henry: 상업용 부동산 브로커의 딜 덱 자동화 Henry는 중개 회사의 내부 데이터셋을 외부 소스와 매끄럽게 통합해 딜용 맞춤 발표 자료와 재무 모델링을 생성하는 상업용 부동산(CRE) 브로커용 AI 코파일럿입니다. 우리의 사명은 CRE 브로커가 더 많은 딜을 더 빨리 성사시켜, 반복 작업은 줄이고 더 많이 벌도록 돕는 것입니다. 우리는 초기에 브로커가 몇 초 만에 딜 덱을 생성하는 것을 가능하게 하는 데 집중합니다—이 작업은 통상 중개 회사 내 여러 부서에서 주당 20시간 이상을 소모합니다.
+  - 가치 제안: 이 회사는 데이터를 통합하고 브로커를 위해 맞춤 발표 자료와 재무 모델을 자율적으로 생성하는 AI 코파일럿을 사용해, 사용자 대신 작업을 완수합니다.
+  - 웹사이트: http://www.henry.ai
 
 **Software**
-- Terracotta AI: AI-powered Infrastructure as Code PR reviews Terracotta AI is an AI-powered Infrastructure as Code PR reviewer for Terraform, OpenTofu, and CDK-TF code, making Infrastructure as Code changes more transparent, less risky, and faster.
+- Terracotta AI: AI 기반 Infrastructure as Code PR 리뷰 Terracotta AI는 Terraform, OpenTofu, CDK-TF 코드용 AI 기반 Infrastructure as Code PR 리뷰어로, Infrastructure as Code 변경을 더 투명하게, 더 낮은 위험으로, 더 빠르게 만듭니다.
 
-Terracotta stops your Infrastructure as Code deployments from becoming ticking time bombs every time you modify your environment with AI-driven, contextual feedback delivered directly to your pull requests.
-  - Value prop: The company uses generative AI to autonomously review and provide contextual feedback on Infrastructure as Code pull requests, acting on behalf of the user to improve code quality and deployment safety.
-  - Website: https://tryterracotta.com
-- CodeStory: Aide is an AI-native , privacy-first IDE built on top of VSCode We're building Aide, an AI-native IDE designed for engineers to enjoy problem-solving with agents by their side.
+Terracotta는 AI 기반의 맥락적 피드백을 pull request에 직접 전달해, 환경을 수정할 때마다 Infrastructure as Code 배포가 시한폭탄이 되는 것을 막아 줍니다.
+  - 가치 제안: 이 회사는 생성형 AI를 사용해 Infrastructure as Code pull request를 자율적으로 검토하고 맥락적 피드백을 제공하며, 사용자 대신 코드 품질과 배포 안전성을 개선합니다.
+  - 웹사이트: https://tryterracotta.com
+- CodeStory: Aide는 VSCode 위에 구축된 AI 네이티브, 프라이버시 우선 IDE입니다 당사는 엔지니어가 에이전트와 함께 문제 해결을 즐기도록 설계된 AI 네이티브 IDE인 Aide를 만들고 있습니다.
 
-We're currently a team of two, based in London, United Kingdom. Between us, we have been tech leads with experience building testing infrastructure at Meta, payment systems for 150k merchants in India, been an ACM ICPC world finalist and Open-Source contributor to critical infrastructure including gRPC and the Bazel build system. We love dev tooling, and enjoy thinking about the future of programming.
-  - Value prop: The company builds an AI-native IDE with agents designed to assist engineers in problem-solving, indicating generative AI agents acting on users' behalf within software development.
-  - Website: https://aide.dev
+우리는 현재 영국 런던에 본사를 둔 두 명 규모의 팀입니다. 저희는 Meta에서 테스트 인프라를 구축하고 인도에서 15만 가맹점을 위한 결제 시스템을 만든 테크 리드 경험, ACM ICPC 세계 대회 결선 진출, gRPC와 Bazel 빌드 시스템 같은 핵심 인프라에 대한 오픈소스 기여 이력을 함께 갖추고 있습니다. 우리는 개발자 도구를 사랑하며 프로그래밍의 미래를 생각하는 것을 즐깁니다.
+  - 가치 제안: 이 회사는 엔지니어의 문제 해결을 돕도록 에이전트를 내장한 AI 네이티브 IDE를 개발하며, 소프트웨어 개발에서 사용자 대신 작동하는 생성형 AI 에이전트를 나타냅니다.
+  - 웹사이트: https://aide.dev
 
 **Transportation**
-- HappyRobot: AI Communication. Built for Logistics. Happyrobot's voice AI agents automate inbound and outbound phone calls in the logistics industry.
+- HappyRobot: AI 커뮤니케이션. 물류를 위해 만들어지다 HappyRobot의 음성 AI 에이전트는 물류 산업의 인바운드·아웃바운드 전화 통화를 자동화합니다.
 
-Freight brokers, 3PLs, carriers and other enterprises connect their information systems to our AI agents to handle check calls, load updates, payment status, appointment scheduling or even sales negotiations.
-  - Value prop: The company provides voice AI agents that autonomously handle phone calls and tasks such as check calls, load updates, and appointment scheduling in logistics, indicating generative AI agents acting on users' behalf.
-  - Website: https://happyrobot.ai
-- FleetWorks: Automating the 2B phone calls and emails that keep freight moving FleetWorks automates the 2B phone calls and emails that the freight industry makes every year. We use voice synthesis, generative AI, and integrations with logistics systems to solve the largest cost in this industry - people. 
+Freight broker, 3PL, 운송사 등 기업들은 자사의 정보 시스템을 저희 AI 에이전트에 연결해 check call, 선적 현황 업데이트, 결제 상태, 약속 일정 조정, 심지어 영업 협상까지 처리합니다.
+  - 가치 제안: 이 회사는 물류에서 check call, 선적 현황 업데이트, 일정 조정 같은 전화 통화와 작업을 자율적으로 처리하는 음성 AI 에이전트를 제공하며, 사용자 대신 작동하는 생성형 AI 에이전트를 나타냅니다.
+  - 웹사이트: https://happyrobot.ai
+- FleetWorks: 물류를 움직이게 만드는 20억 건의 전화와 이메일 자동화 FleetWorks는 물류 업계가 매년 만들어 내는 20억 건의 전화와 이메일을 자동화합니다. 우리는 음성 합성, 생성형 AI, 물류 시스템과의 통합으로 이 업계 최대 비용 항목 - 사람 - 을 해결합니다. 
 
 
-When Uber Freight needs to ship a truckload of Coca-Cola going from Phoenix to Bentonville. They can use FleetWorks to call the driver to get an ETA, alert the receiver and shipper that the driver is running late, and reschedule the appointment - all with automated text messages, phone calls, and emails.
-  - Value prop: The company uses generative AI and voice synthesis to autonomously handle communications such as calls, texts, and emails on behalf of users to manage freight logistics, demonstrating generative AI agents acting on the user's behalf.
-  - Website: https://fleetworks.ai
+Uber Freight가 Phoenix에서 Bentonville로 코카콜라 트럭 한 대분을 운송해야 할 때, FleetWorks를 사용해 기사에게 전화로 ETA를 받고, 지연 사실을 수신인과 발화인에게 알리고, 약속 일정을 다시 잡을 수 있습니다—모두 자동화된 문자 메시지, 전화, 이메일로 이루어집니다.
+  - 가치 제안: 이 회사는 생성형 AI와 음성 합성을 사용해 화물 물류를 관리하기 위해 사용자 대신 전화, 문자, 이메일 같은 통신을 자율적으로 처리하며, 사용자 대신 작동하는 생성형 AI 에이전트를 보여 줍니다.
+  - 웹사이트: https://fleetworks.ai
