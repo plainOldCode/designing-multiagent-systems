@@ -1,26 +1,26 @@
-# Memory Examples
+# 메모리(memory) 예시
 
-This directory demonstrates two distinct approaches to agent memory in PicoAgents: **agent-managed memory** (agents actively control their knowledge base) and **application-managed memory** (developers control storage, framework injects context).
+이 디렉터리는 PicoAgents에서 에이전트(agent) 메모리의 두 가지 서로 다른 접근법을 시연합니다: **에이전트 관리 메모리**(에이전트가 자신의 지식 기반을 적극적으로 통제)와 **애플리케이션 관리 메모리**(개발자가 저장을 통제하고 프레임워크가 컨텍스트를 주입).
 
-## Agent-Managed Memory (MemoryTool)
+## 에이전트 관리 메모리 (MemoryTool)
 
-**File:** [`memory_tool_example.py`](memory_tool_example.py)
+**파일:** [`memory_tool_example.py`](memory_tool_example.py)
 
-Agents explicitly read, write, and organize persistent knowledge through file operations. The agent decides when to check memory, what to store, and how to organize information—enabling cross-session learning where patterns discovered in one conversation can be applied in future sessions.
+에이전트가 파일 조작을 통해 지속적 지식을 명시적으로 읽고, 쓰고, 정리합니다. 에이전트는 언제 메모리를 확인할지, 무엇을 저장할지, 정보를 어떻게 조직할지를 스스로 결정하며, 한 대화에서 발견한 패턴을 이후 세션에 적용할 수 있는 세션 간 학습을 가능하게 합니다.
 
-Memory tools utilize ideas from [Anthropic's context management work](https://www.anthropic.com/news/context-management), particularly their file-based memory system.
+메모리 도구는 [Anthropic의 컨텍스트 관리 연구](https://www.anthropic.com/news/context-management)의 아이디어, 특히 파일 기반 메모리 시스템의 아이디어를 활용합니다.
 
-**Book reference:** Chapter 4, Section 4.10 "Agent-Managed Memory"
+**책 참조:** 4장 4.10절 "Agent-Managed Memory"
 
-## Application-Managed Memory (ListMemory)
+## 애플리케이션 관리 메모리 (ListMemory)
 
-**File:** [`list_memory_example.py`](list_memory_example.py)
+**파일:** [`list_memory_example.py`](list_memory_example.py)
 
-Developers call `memory.add()` to store information (user preferences, facts, conversation summaries), and the framework automatically retrieves and injects relevant context into prompts via `memory.get_context()`. The agent receives this context but does not control storage or retrieval.
+개발자가 `memory.add()`를 호출해 정보(사용자 선호, 사실, 대화 요약)를 저장하고, 프레임워크가 `memory.get_context()`를 통해 관련 컨텍스트를 자동으로 검색해 프롬프트에 주입합니다. 에이전트는 이 컨텍스트를 받지만 저장이나 검색을 통제하지는 않습니다.
 
-**Book reference:** Chapter 4, Section 4.9 "Adding Memory"
+**책 참조:** 4장 4.9절 "Adding Memory"
 
-## Running the Examples
+## 예시 실행
 
 ```bash
 # Navigate to examples directory
@@ -33,9 +33,9 @@ python memory_tool_example.py
 python list_memory_example.py
 ```
 
-Both examples require `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` environment variables.
+두 예시 모두 `AZURE_OPENAI_API_KEY`와 `AZURE_OPENAI_ENDPOINT` 환경 변수가 필요합니다.
 
-## Related Documentation
+## 관련 문서
 
-- [PicoAgents Memory Documentation](../../picoagents/docs/memory.md)
-- [Book Chapter 4: Building Your First Agent](../../../../chapters/ch04-building-first-agent.qmd)
+- [PicoAgents 메모리 문서](../../picoagents/docs/memory.md)
+- [책 4장: 첫 번째 에이전트 만들기](../../../../chapters/ch04-building-first-agent.qmd)

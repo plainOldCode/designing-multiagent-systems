@@ -1,18 +1,18 @@
-# MCP Integration Examples
+# MCP 통합(integration) 예시
 
-Examples demonstrating how to use Model Context Protocol (MCP) servers with PicoAgents.
+Model Context Protocol(MCP) 서버(server)를 PicoAgents와 함께 사용하는 방법을 시연하는 예시입니다.
 
-## What is MCP?
+## MCP란?
 
-[Model Context Protocol (MCP)](https://modelcontextprotocol.io) is an open protocol that standardizes how applications provide context to LLMs. MCP servers expose:
+[Model Context Protocol (MCP)](https://modelcontextprotocol.io)는 애플리케이션이 LLM에게 컨텍스트(context)를 제공하는 방식을 표준화하는 오픈 프로토콜(protocol)입니다. MCP 서버(server)는 다음을 노출합니다:
 
-- **Tools**: Functions that LLMs can call to perform actions
-- **Resources**: Data sources for providing context
-- **Prompts**: Reusable prompt templates
+- **도구(Tools)**: LLM이 작업을 수행하기 위해 호출할 수 있는 함수
+- **리소스(Resources)**: 컨텍스트 제공용 데이터 소스(source)
+- **프롬프트(Prompts)**: 재사용 가능한 프롬프트 템플릿(template)
 
-PicoAgents integrates seamlessly with MCP, allowing you to use tools from any MCP-compliant server as if they were native PicoAgents tools.
+PicoAgents는 MCP와 매끄럽게 통합되어, MCP를 준수하는 어떤 서버(server)의 도구가든 PicoAgents의 네이티브 도구처럼 사용할 수 있습니다.
 
-## Installation
+## 설치
 
 ```bash
 # Install PicoAgents with MCP support
@@ -22,17 +22,17 @@ pip install "picoagents[mcp]"   # requires mcp>=2.0.0 (protocol 2026-07-28)
 pip install picoagents mcp
 ```
 
-## Example
+## 예시
 
-### MCP with Tool Approvals (`basic_mcp_agent.py`)
+### 도구 승인을 포함한 MCP (`basic_mcp_agent.py`)
 
-A practical example demonstrating MCP filesystem integration with PicoAgents' approval system.
+PicoAgents의 승인(approval) 시스템과 MCP 파일시스템 통합을 함께 보여주는 실용적 예시입니다.
 
-The example shows two tasks:
-1. **Task 1** (Read-only): Analyzes directory contents and provides organization recommendations - runs automatically without approval
-2. **Task 2** (Write operation): Creates a sample file - requires user approval before execution
+예시는 두 가지 작업을 보여줍니다:
+1. **작업 1** (읽기 전용): 디렉터리 내용을 분석하고 정리 권고를 제공 - 승인 없이 자동 실행
+2. **작업 2** (쓰기 작업): 샘플 파일 생성 - 실행 전 사용자 승인(approval) 필요
 
-This demonstrates how approval mode provides a safety layer for sensitive operations.
+이로써 승인 모드(approval mode)가 민감한 작업에 안전장치(safety layer)를 제공하는 방식을 보여줍니다.
 
 ```python
 from picoagents.tools import ApprovalMode, StdioServerConfig, create_mcp_tools
@@ -63,7 +63,7 @@ agent = Agent(name="agent", tools=tools, ...)
 # manager, tools = await create_mcp_tools(configs)
 ```
 
-**Run:**
+**실행:**
 ```bash
 # Analyze Desktop (default)
 python examples/mcp/basic_mcp_agent.py
@@ -72,9 +72,9 @@ python examples/mcp/basic_mcp_agent.py
 python examples/mcp/basic_mcp_agent.py ~/Documents
 ```
 
-**Expected behavior:**
-- Task 1 executes immediately (read-only operations)
-- Task 2 pauses and prompts user for approval:
+**예상 동작:**
+- 작업 1은 즉시 실행됩니다 (읽기 전용 작업)
+- 작업 2는 잠시 멈추고 사용자에게 승인을 요청합니다:
   ```
   ⚠️  APPROVAL REQUIRED
   ==================================================
@@ -83,13 +83,13 @@ python examples/mcp/basic_mcp_agent.py ~/Documents
       Parameters: {'path': '/Users/you/Desktop/sample.txt', 'content': 'Hello from MCP with approval!'}
       Approve? (y/n):
   ```
-- After approval, execution continues and the file is created
+- 승인 후 실행이 계속되고 파일이 생성됩니다
 
-## Supported Transports
+## 지원 트랜스포트(transport)
 
-PicoAgents supports all MCP transports:
+PicoAgents는 모든 MCP 트랜스포트(transport)를 지원합니다:
 
-### Stdio (for local servers)
+### Stdio (로컬 서버(server)용)
 ```python
 StdioServerConfig(
     server_id="filesystem",
@@ -98,7 +98,7 @@ StdioServerConfig(
 )
 ```
 
-### Streamable HTTP (recommended for production)
+### Streamable HTTP (프로덕션 권장)
 ```python
 HTTPServerConfig(
     server_id="weather",
@@ -117,27 +117,27 @@ HTTPServerConfig(
 )
 ```
 
-## Available MCP Servers
+## 사용 가능한 MCP 서버
 
-The MCP community provides many ready-to-use servers:
+MCP 커뮤니티는 바로 쓸 수 있는 많은 서버(server)를 제공합니다:
 
-- **Filesystem**: File operations ([npm](https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem))
-- **GitHub**: Repository operations ([npm](https://www.npmjs.com/package/@modelcontextprotocol/server-github))
-- **Google Drive**: Drive access ([npm](https://www.npmjs.com/package/@modelcontextprotocol/server-gdrive))
-- **Slack**: Slack workspace access ([npm](https://www.npmjs.com/package/@modelcontextprotocol/server-slack))
-- **PostgreSQL**: Database queries ([npm](https://www.npmjs.com/package/@modelcontextprotocol/server-postgres))
+- **Filesystem**: 파일 조작 ([npm](https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem))
+- **GitHub**: 저장소(repository) 조작 ([npm](https://www.npmjs.com/package/@modelcontextprotocol/server-github))
+- **Google Drive**: Drive 접근 ([npm](https://www.npmjs.com/package/@modelcontextprotocol/server-gdrive))
+- **Slack**: Slack 워크스페이스(workspace) 접근 ([npm](https://www.npmjs.com/package/@modelcontextprotocol/server-slack))
+- **PostgreSQL**: 데이터베이스(database) 질의(query) ([npm](https://www.npmjs.com/package/@modelcontextprotocol/server-postgres))
 
-See the [official MCP servers repository](https://github.com/modelcontextprotocol/servers) for more.
+더 많은 서버는 [공식 MCP 서버 저장소](https://github.com/modelcontextprotocol/servers)를 참고하십시오.
 
-## Key Features
+## 주요 기능
 
-1. **Transparent Integration**: MCP tools work exactly like native PicoAgents tools
-2. **Multiple Servers**: Connect to multiple MCP servers simultaneously
-3. **Tool Namespacing**: Tools are automatically namespaced by server ID to avoid conflicts
-4. **Lifecycle Management**: Simple connect/disconnect with proper cleanup
-5. **All Transports**: Stdio, SSE, and HTTP transports supported out of the box
+1. **투명한 통합**: MCP 도구는 PicoAgents 네이티브 도구와 완전히 동일하게 동작
+2. **다중 서버(server)**: 여러 MCP 서버에 동시에 접속
+3. **도구 이름공간(namespacing)**: 충돌 방지를 위해 도구가 서버 ID로 자동 이름공간화
+4. **수명주기(lifecycle) 관리**: 정리(cleanup)를 갖춘 간단한 접속/해제
+5. **모든 트랜스포트(transport)**: Stdio, SSE, HTTP 트랜스포트 기본 지원
 
-## Architecture
+## 아키텍처(architecture)
 
 ```
 ┌─────────────────────────────────────┐
@@ -165,9 +165,9 @@ See the [official MCP servers repository](https://github.com/modelcontextprotoco
 └─────────────────────────────────────┘
 ```
 
-## Common Patterns
+## 일반적인 패턴
 
-### Pattern 1: Single Server for Specific Domain
+### 패턴 1: 특정 도메인(domain)용 단일 서버(server)
 ```python
 # Connect to filesystem server
 config = StdioServerConfig(
@@ -186,7 +186,7 @@ agent = Agent(
 )
 ```
 
-### Pattern 2: Multiple Servers for Rich Functionality
+### 패턴 2: 풍부한 기능 위한 다중 서버(server)
 ```python
 # Connect to multiple specialized servers
 configs = [
@@ -200,7 +200,7 @@ manager, tools = await create_mcp_tools(configs)
 agent = Agent(name="assistant", tools=tools, ...)
 ```
 
-### Pattern 3: Lazy Connection
+### 패턴 3: 지연(lazy) 접속
 ```python
 # Register servers without connecting
 manager, _ = await create_mcp_tools(configs, auto_connect=False)
@@ -216,32 +216,32 @@ async with manager.managed_connection("github"):
 # Automatically disconnected
 ```
 
-## Troubleshooting
+## 문제 해결
 
-### MCP not available
+### MCP를 사용할 수 없음
 ```
 ❌ MCP not installed. Install with: pip install "picoagents[mcp]"   # requires mcp>=2.0.0 (protocol 2026-07-28)
 ```
-**Solution:** Run `pip install "picoagents[mcp]"   # requires mcp>=2.0.0 (protocol 2026-07-28)` or `pip install mcp`
+**해결:** `pip install "picoagents[mcp]"   # requires mcp>=2.0.0 (protocol 2026-07-28)` 또는 `pip install mcp` 실행
 
-### Server connection fails
+### 서버(server) 접속 실패
 ```
 ConnectionError: Failed to connect to MCP server 'filesystem': ...
 ```
-**Solution:** Check that:
-- The server command is correct (e.g., `npx` is installed for Node servers)
-- Required environment variables are set (API keys, etc.)
-- The server is accessible (for HTTP/SSE transports)
+**해결:** 다음을 확인하십시오:
+- 서버 명령이 정확한지 (예: Node 서버(server)의 경우 `npx`가 설치되어 있는지)
+- 필요한 환경 변수가 설정되었는지 (API 키 등)
+- 서버에 접근 가능한지 (HTTP/SSE 트랜스포트(transport)의 경우)
 
-### No tools discovered
-**Solution:** Verify the server is working by testing it directly with MCP Inspector:
+### 도구가 검색(discovery)되지 않음
+**해결:** MCP Inspector로 서버를 직접 테스트해 정상 작동인지 확인하십시오:
 ```bash
 npx @modelcontextprotocol/inspector npx -y @modelcontextprotocol/server-filesystem /tmp
 ```
 
-## Tool Approvals
+## 도구 승인(approval)
 
-PicoAgents' approval system works seamlessly with MCP tools. You can require user approval before executing sensitive operations:
+PicoAgents의 승인(approval) 시스템은 MCP 도구와 매끄럽게 함께 동작합니다. 민감한 작업 실행 전에 사용자 승인을 요구할 수 있습니다:
 
 ```python
 from picoagents.tools import ApprovalMode
@@ -258,25 +258,25 @@ for tool in mcp_tools:
 agent = Agent(name="agent", tools=mcp_tools, ...)
 ```
 
-When a tool requires approval:
-1. The agent emits a `ToolApprovalEvent` with tool call details
-2. Execution pauses until approval is granted or denied
-3. User can inspect parameters and decide whether to proceed
-4. This provides an extra safety layer for destructive operations
+도구가 승인을 요구하면:
+1. 에이전트(agent)가 도구 호출 세부사항과 함께 `ToolApprovalEvent`를 방출
+2. 승인 또는 거절 때까지 실행이 일시 정지
+3. 사용자는 파라미터를 살펴보고 진행 여부를 결정할 수 있음
+4. 파괴적(destructive) 작업에 추가 안전장치(safety layer) 제공
 
-## Best Practices
+## 모범 규준
 
-1. **Always cleanup**: Call `await manager.disconnect_all()` when done
-2. **Use context managers**: For automatic cleanup with `managed_connection()`
-3. **Namespace awareness**: Remember tools are prefixed with `mcp_{server_id}_`
-4. **Error handling**: Wrap MCP operations in try/except for robustness
-5. **Security**:
-   - Limit filesystem/database access paths and permissions
-   - Use approval mode for write/delete operations
-   - Consider read-only access for analysis tasks
+1. **항상 정리(cleanup)**: 작업이 끝나면 `await manager.disconnect_all()` 호출
+2. **컨텍스트 관리자(context manager) 사용**: `managed_connection()`으로 자동 정리
+3. **이름공간(namespacing) 인지**: 도구가 `mcp_{server_id}_` 접두사로 시작함을 기억
+4. **오류(error) 처리**: 견고성(robustness)을 위해 MCP 작업을 try/except로 감싸기
+5. **보안(security)**:
+   - 파일시스템/데이터베이스(database) 접근 경로와 권한 제한
+   - 쓰기/삭제 작업에는 승인 모드(approval mode) 사용
+   - 분석 작업에는 읽기 전용 접근 고려
 
-## Learn More
+## 더 알아보기
 
-- [MCP Specification](https://modelcontextprotocol.io/specification)
-- [MCP Servers Repository](https://github.com/modelcontextprotocol/servers)
-- [PicoAgents Documentation](https://github.com/victordibia/designing-multiagent-systems)
+- [MCP 사양(specification)](https://modelcontextprotocol.io/specification)
+- [MCP 서버(server) 저장소](https://github.com/modelcontextprotocol/servers)
+- [PicoAgents 문서](https://github.com/victordibia/designing-multiagent-systems)

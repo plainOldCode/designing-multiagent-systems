@@ -1,10 +1,10 @@
-# Framework Comparison Examples
+# 프레임워크 비교 예시
 
-This directory contains equivalent implementations of multi-agent patterns across different frameworks. The goal is to demonstrate that the core patterns taught in this book are universal and can be implemented in any framework.
+이 디렉터리는 서로 다른 프레임워크 전반에 걸친 멀티 에이전트 패턴의 동등 구현을 담고 있습니다. 목표는 이 책에서 가르치는 핵심 패턴이 보편적이며 어떤 프레임워크에서든 구현할 수 있음을 보여주는 것입니다.
 
-## Structure
+## 구조
 
-Each framework subdirectory mirrors the main `examples/` structure:
+각 프레임워크 하위 디렉터리는 메인 `examples/` 구조를 그대로 따릅니다:
 
 ```
 frameworks/
@@ -22,20 +22,20 @@ frameworks/
     └── orchestration/   # Round-robin, supervisor patterns
 ```
 
-## Pattern Mapping
+## 패턴 대응표
 
-| Pattern | PicoAgents | Agent Framework | Google ADK | LangGraph |
+| 패턴 | PicoAgents | Agent Framework | Google ADK | LangGraph |
 |---------|------------|-----------------|------------|-----------|
-| Basic agent with tools | `Agent` + function | `ChatAgent` + `@ai_function` | `Agent` + function | `create_react_agent` + `@tool` |
-| Memory/context | `ListMemory` | `ContextProvider` | `ToolContext.state` | `MemorySaver` checkpointer |
-| Sequential workflow | `Workflow.chain()` | `SequentialBuilder` | `SequentialAgent` | `StateGraph` + edges |
-| Round-robin orchestration | `RoundRobinOrchestrator` | `WorkflowBuilder` (cyclic) | `LoopAgent` | `StateGraph` + conditional edges |
-| Parallel orchestration | (manual asyncio) | `ConcurrentBuilder` | `ParallelAgent` | (manual asyncio) |
-| Supervisor orchestration | `SupervisorOrchestrator` | (manual) | (sub_agents) | `StateGraph` + routing |
-| Handoff orchestration | (manual) | `HandoffBuilder` | (sub_agents routing) | `Command`/`Send` |
-| Structured output | `output_format=Model` | `response_format=Model` | `response_schema=Model` | `with_structured_output` |
+| 도구를 갖춘 기본 에이전트(agent) | `Agent` + 함수 | `ChatAgent` + `@ai_function` | `Agent` + 함수 | `create_react_agent` + `@tool` |
+| 메모리(memory)/컨텍스트(context) | `ListMemory` | `ContextProvider` | `ToolContext.state` | `MemorySaver` 체커포인터(checkpointer) |
+| 순차 워크플로(workflow) | `Workflow.chain()` | `SequentialBuilder` | `SequentialAgent` | `StateGraph` + 엣지(edge) |
+| 라운드 로빈 오케스트레이션(orchestration) | `RoundRobinOrchestrator` | `WorkflowBuilder` (순환) | `LoopAgent` | `StateGraph` + 조건부 엣지 |
+| 병렬 오케스트레이션 | (수동 asyncio) | `ConcurrentBuilder` | `ParallelAgent` | (수동 asyncio) |
+| 슈퍼바이저 오케스트레이션 | `SupervisorOrchestrator` | (수동) | (sub_agents) | `StateGraph` + 라우팅(routing) |
+| 핸드오프(handoff) 오케스트레이션 | (수동) | `HandoffBuilder` | (sub_agents 라우팅) | `Command`/`Send` |
+| 구조화된 출력(structured output) | `output_format=Model` | `response_format=Model` | `response_schema=Model` | `with_structured_output` |
 
-## Running Examples
+## 예시 실행
 
 ### Microsoft Agent Framework
 
@@ -85,13 +85,13 @@ python examples/frameworks/langgraph/workflows/sequential.py
 python examples/frameworks/langgraph/orchestration/supervisor.py
 ```
 
-## Comparison Philosophy
+## 비교 철학
 
-These examples aim to:
+이 예시들의 목표는 다음과 같습니다:
 
-1. **Show equivalence**: Same task, same behavior, different syntax
-2. **Highlight patterns**: Core patterns are framework-agnostic
-3. **Be practical**: Runnable examples, not pseudo-code
-4. **Stay focused**: Only replicate what maps cleanly between frameworks
+1. **동등성 보여주기**: 같은 작업, 같은 동작, 다른 구문(syntax)
+2. **패턴 강조**: 핵심 패턴은 프레임워크에 독립적
+3. **실용적일 것**: 실행 가능한 예시, 유사 코드(pseudo-code) 아님
+4. **집중 유지**: 프레임워크 간에 깔끔하게 대응되는 것만 재현
 
-We intentionally skip framework-specific features that don't have clear equivalents.
+명확한 대응이 없는 프레임워크 고유 기능은 의도적으로 건너뜁니다.

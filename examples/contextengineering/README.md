@@ -1,54 +1,54 @@
-# Context Compaction Strategies
+# 컨텍스트 압축(compaction) 전략
 
-Demonstrates how context compaction strategies affect agent performance on a multi-step code review task.
+다단계 코드 리뷰 작업에서 컨텍스트 압축 전략이 에이전트(agent) 성능에 어떤 영향을 주는지 시연합니다.
 
-## Running
+## 실행
 
-Open `compaction.ipynb` in Jupyter and run all cells. Requires:
+Jupyter에서 `compaction.ipynb`를 열고 모든 셀을 실행하십시오. 필요한 것:
 
-- Azure OpenAI API access (set `AZURE_OPENAI_ENDPOINT` in `picoagents/.env`)
-- PicoAgents installed: `pip install -e ".[all]"` from `picoagents/`
+- Azure OpenAI API 접근 권한(`picoagents/.env`에 `AZURE_OPENAI_ENDPOINT` 설정)
+- PicoAgents 설치: `picoagents/`에서 `pip install -e ".[all]"`
 
-Each run takes several minutes (5 agent runs with real API calls).
+각 실행은 몇 분씩 걸립니다 (실제 API 호출을 수반하는 에이전트 실행 5회).
 
-## What It Shows
+## 보여주는 내용
 
-The notebook runs an exhaustive code review of the [handtracking](https://github.com/victordibia/handtracking) repository (~44 Python files) with five compaction configurations:
+이 노트북은 [handtracking](https://github.com/victordibia/handtracking) 저장소(Python 파일 약 44개)의 상세 코드 리뷰를 다섯 가지 압축 구성으로 실행합니다:
 
-| Run | Strategy | Budget | Hook | What it tests |
+| 실행 | 전략 | 예산 | 훅(hook) | 검증하는 것 |
 |-----|----------|--------|------|---------------|
-| NoCompaction | None | — | Yes | Baseline — unbounded context growth |
-| HeadTail 8k | HeadTail | 8,000 | Yes | Aggressive compaction + hook interaction |
-| HeadTail 8k (no hook) | HeadTail | 8,000 | No | Isolates completion hook effect |
-| HeadTail 15k | HeadTail | 15,000 | Yes | Moderate compaction budget |
-| Isolation | Sub-agent delegation | 50,000 | Yes | Coordinator + sub-agent pattern |
+| NoCompaction | 없음 | — | 예 | 기준선 — 한도 없는 컨텍스트 성장 |
+| HeadTail 8k | HeadTail | 8,000 | 예 | 공격적 압축 + 훅 상호작용 |
+| HeadTail 8k (no hook) | HeadTail | 8,000 | 아니오 | 완료 훅 효과 격리 |
+| HeadTail 15k | HeadTail | 15,000 | 예 | 중간 수준의 압축 예산 |
+| Isolation | 하위 에이전트(sub-agent) 위임(delegation) | 50,000 | 예 | 코디네이터 + 하위 에이전트 패턴 |
 
-Key outputs:
-- **Context growth chart** — API-reported input tokens per LLM call showing sawtooth compaction patterns
-- **Trace analysis** — tool call batching, file redundancy, and thrashing detection
-- **Cost vs quality scatter** — total tokens and latency vs LLM-as-judge quality scores
-- **Judge reasoning** — per-criterion evaluation explaining *why* each strategy scored as it did
+주요 산출물:
+- **컨텍스트 성장 차트** — LLM 호출별 API 보고 입력 토큰 수로, 톱니 모양 압축 패턴을 보여줍니다
+- **추적(trace) 분석** — 도구 호출 묶음 처리, 파일 중복, 쓰래싱(thrashing) 탐지
+- **비용 대 품질 산점도(scatter)** — 총 토큰과 소요 시간 vs LLM-as-judge 품질 점수
+- **판정자(judge) 추론** — 각 기준별로 그 전략이 그 점수를 받은 *이유*를 설명
 
-Results are persisted via `EvalResults` — re-run visualizations without re-running agents.
+결과는 `EvalResults`로 저장됩니다 — 에이전트를 다시 실행하지 않고 시각화만 재실행할 수 있습니다.
 
-## Key Insights
+## 핵심 인사이트
 
-**Compaction reallocates tokens, it doesn't necessarily reduce them.** An agent with compaction may run more iterations (more LLM calls), each with a smaller context. Total tokens can be similar to no-compaction, but each iteration is more productive because the agent isn't dragging along verbatim history of every prior file read.
+**압축은 토큰을 줄이기보다 재배분합니다.** 압축을 쓰는 에이전트는 각 호출의 컨텍스트가 더 작은 채로 LLM 호출(반복)을 더 많이 수행할 수 있습니다. 총 토큰 수는 무압축과 비슷할 수 있지만, 에이전트가 이전에 읽은 파일의 원문 이력을 그대로 끌고 다니지 않으므로 각 반복의 생산성이 더 높습니다.
 
-**Thrashing is the failure mode.** When the budget is too tight, the agent reads files, compaction drops them, and the agent re-reads the same files. The signal: high duplicate read ratios and a flat token line clamped at the budget. In this experiment, HeadTail 8k showed 55% redundant reads vs 15% for the no-hook variant.
+**쓰래싱이 실패 모드입니다.** 예산이 너무 빠듯하면 에이전트가 파일을 읽고, 압축이 그것을 떨어뜨리고, 에이전트가 같은 파일을 다시 읽습니다. 신호는 높은 중복 읽기 비율과 예산에 붙들린 채 평탄한 토큰 선입니다. 이 실험에서 HeadTail 8k는 훅 없는 변형의 15% 대비 55%의 중복 읽기를 보였습니다.
 
-**Completion hooks and compaction interact.** Without a hook, the agent stops the first time it decides it's done. With a hook, the agent gets pushed back to keep working. Whether this helps depends on whether the extra work is productive or just more thrashing at a tight budget.
+**완료 훅과 압축은 상호작용합니다.** 훅이 없으면 에이전트는 처음 완료를 판단한 순간 멈춥니다. 훅이 있으면 계속 작업하도록 밀려납니다. 이것이 도움이 되는지는 추가 작업이 생산적인지, 아니면 빠듯한 예산에서 쓰래싱만 반복하는지에 달려 있습니다.
 
-**Budget sizing rule of thumb:** set the budget to 2-3x the typical working set. Below peak context = active compaction; above = no effect. The sweet spot is where compaction fires intermittently but duplicate reads stay low.
+**예산 산정 경험칙:** 예산을 일반적 작업 집합(working set)의 2-3배로 설정하십시오. 최고 컨텍스트보다 낮으면 능동적 압축이 작동하고, 높으면 효과가 없습니다. 압축이 간헐적으로 발생하면서도 중복 읽기는 낮게 유지되는 지점이 최적입니다.
 
-## When to Use What
+## 어떤 상황에 무엇을
 
-| Scenario | Strategy | Budget |
+| 시나리오 | 전략 | 예산 |
 |----------|----------|--------|
-| Multi-step tool tasks | `HeadTailCompaction` | 2-3x typical working set |
-| Short tasks (< 5 steps) | `NoCompaction` | N/A |
-| Debugging / benchmarking | `NoCompaction` | N/A |
+| 다단계 도구 작업 | `HeadTailCompaction` | 일반적 작업 집합의 2-3배 |
+| 짧은 작업 (5단계 미만) | `NoCompaction` | 해당 없음 |
+| 디버깅 / 벤치마킹(benchmarking) | `NoCompaction` | 해당 없음 |
 
-## Further Reading
+## 추가 자료
 
-This notebook is the basis for the blog post [Context Engineering 101: How Agents Use LLMs](https://newsletter.victordibia.com/p/context-engineering-101-how-agents), which covers compaction, isolation, instructions, and tool design in broader context.
+이 노트북은 블로그 글 [Context Engineering 101: How Agents Use LLMs](https://newsletter.victordibia.com/p/context-engineering-101-how-agents)의 근거가 되는 자료로, 압축, 격리(isolation), 지시문(instruction), 도구 설계를 더 넓은 관점에서 다룹니다.

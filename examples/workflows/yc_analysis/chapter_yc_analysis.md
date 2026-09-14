@@ -1,43 +1,43 @@
-# Building Production Multi-Agent Systems: A Real-World Case Study
+# 프로덕션 멀티 에이전트 시스템 구축: 실제 사례 연구
 
-## Introduction: The Y Combinator AI Agent Revolution
+## 서론: Y Combinator AI 에이전트(agent) 혁명
 
-In the summer of 2024, a remarkable shift became visible in the startup ecosystem. Among Y Combinator's portfolio of over 5,000 companies, 234 companies—nearly 5%—were now building AI agents. This represents a staggering 47x increase from just 5 companies in 2020.
+2024년 여름, 스타트업 생태계에서 눈에 띄는 변화가 관측되었습니다. Y Combinator의 5,000여개 기업 포트폴리오 가운데 234개 기업 — 거의 5% — 이 AI 에이전트를 구축하고 있었습니다. 2020년의 겨우 5개 기업에서 47배 늘어난, 가히 경이로운 증가입니다.
 
-But here's what makes this story compelling for engineers: analyzing this trend required processing millions of data points, calling expensive LLM APIs thousands of times, and extracting structured insights from unstructured text. The naive approach would have cost hundreds of dollars and taken days to complete.
+엔지니어에게 이 이야기가 매력적인 이유는 이렇습니다. 이 추세를 분석하려면 수백만 건의 데이터 포인트를 처리하고, 비싼 LLM API를 수천 번 호출하고, 비정형 텍스트에서 구조화된 인사이트를 추출해야 했습니다. 소박한(naive) 접근 방식이라면 비용이 수백 달러에 걸리고 완료까지 며칠이 걸렸을 것입니다.
 
-Instead, by applying production multi-agent patterns, we reduced costs by 90% and completed the analysis in minutes. This chapter walks through building that exact system—a real-world case study that demonstrates how to architect, implement, and deploy production-ready multi-agent workflows.
+대신 프로덕션 멀티 에이전트 패턴을 적용해 비용을 90% 줄이고 분석을 몇 분 안에 끝냈습니다. 이 장은 바로 그 시스템의 구축 과정을 다룹니다 — 아키텍처(architecture) 설계, 구현, 프로덕션 준비 멀티 에이전트 워크플로(workflow) 배포를 보여주는 실제 사례 연구입니다.
 
-## The Challenge: Production-Scale Data Analysis
+## 과제: 프로덕션 규모 데이터 분석
 
-### The Problem Space
+### 문제 공간(problem space)
 
-When we set out to analyze AI agent trends in the YC portfolio, we faced several classic production challenges:
+YC 포트폴리오의 AI 에이전트(agent) 추세를 분석하기로 했을 때, 우리는 전형적인 프로덕션 과제 여러 가지에 직면했습니다:
 
-1. **Scale**: 5,000+ companies to analyze
-2. **Cost**: Each LLM call costs ~$0.01-0.02
-3. **Accuracy**: Unstructured data requires careful extraction
-4. **Reliability**: Process must be resumable and fault-tolerant
-5. **Maintainability**: Code must be testable and modular
+1. **규모(Scale)**: 분석 대상 기업 5,000여 곳
+2. **비용(Cost)**: LLM 호출 1회당 약 $0.01-0.02
+3. **정확성(Accuracy)**: 비정형 데이터에는 세심한 추출(extraction) 필요
+4. **신뢰성(Reliability)**: 처리는 재개(resume) 가능하고 내결함성(fault-tolerant)이어야 함
+5. **유지보수성(Maintainability)**: 코드는 테스트 가능하고 모듈형이어야 함
 
-A naive implementation calling GPT-4 on every company description would cost $50-100 and risk hitting rate limits or failing partway through.
+모든 기업 설명에 GPT-4를 호출하는 소박한(naive) 구현이면 비용이 $50-100 들고, 속도 제한(rate limit)에 걸리거나 중간에 실패할 위험이 있습니다.
 
-### The Multi-Agent Solution
+### 멀티 에이전트 해결책
 
-We designed a four-stage workflow that exemplifies production multi-agent patterns:
+우리는 프로덕션 멀티 에이전트 패턴을 구현하는 4단계 워크플로(workflow)를 설계했습니다:
 
 ```
 Raw Data → Keyword Filter → AI Classification → Trend Analysis
    5K       →     500      →      234        →    Insights
 ```
 
-Each stage is an independent, testable agent with clear inputs and outputs. The key insight: **90% cost savings through intelligent pre-filtering**.
+각 단계는 입출력이 명확한 독립적·테스트 가능 에이전트(agent)입니다. 핵심 인사이트는 **지능형 사전 필터링(pre-filtering)을 통한 90% 비용 절감**입니다.
 
-## Architecture: The PicoAgents Framework
+## 아키텍처(architecture): PicoAgents 프레임워크
 
-Our implementation uses PicoAgents, a production-focused workflow framework designed for real-world multi-agent systems.
+우리의 구현은 실제 세계 멀티 에이전트 시스템(profaction-focused)을 위해 설계된 프로덕션 중심 워크플로(workflow) 프레임워크인 PicoAgents를 사용합니다.
 
-### Core Patterns
+### 핵심 패턴
 
 ```python
 # 1. Type-Safe Data Flow
@@ -72,9 +72,9 @@ workflow = Workflow(
 )
 ```
 
-### Key Engineering Decisions
+### 주요 엔지니어링 결정
 
-**1. Two-Stage Filtering**
+**1. 2단계 필터링(filtering)**
 ```python
 # Stage 1: Regex pre-filtering (cheap)
 AI_REGEX = re.compile(r'\bai\b|artificial intelligence|machine learning', re.IGNORECASE)
@@ -88,7 +88,7 @@ async def classify_agents(filtered_companies):
     # Process only the 10% that passed pre-filtering
 ```
 
-**2. Structured Output with Zero Hallucination**
+**2. 할루시네이션(hallucination) 0의 구조화된 출력(structured output)**
 ```python
 response = await client.create(
     model=config.azure_deployment,
@@ -98,7 +98,7 @@ response = await client.create(
 analysis = response.structured_output  # Always valid AgentAnalysis object
 ```
 
-**3. Resumable Processing with Checkpoints**
+**3. 체크포인트(checkpoint)를 통한 재개(resume) 가능 처리**
 ```python
 def save_checkpoint(data: Dict, filepath: str):
     """Save progress to disk - workflow can resume on failure."""
@@ -113,9 +113,9 @@ def load_checkpoint(filepath: str) -> Dict:
     return {}
 ```
 
-## Implementation Deep Dive
+## 구현 심층 탐색
 
-### Stage 1: Data Loading with Caching
+### 단계 1: 캐싱(caching)을 동반한 데이터 로드(load)
 
 ```python
 async def load_data(config: WorkflowConfig, context: Context) -> DataResult:
@@ -141,7 +141,7 @@ async def load_data(config: WorkflowConfig, context: Context) -> DataResult:
     return DataResult(companies=len(companies), from_cache=False)
 ```
 
-### Stage 2: Intelligent Pre-Filtering
+### 단계 2: 지능형 사전 필터링(pre-filtering)
 
 ```python
 async def filter_keywords(data_result: DataResult, context: Context) -> FilterResult:
@@ -166,7 +166,7 @@ async def filter_keywords(data_result: DataResult, context: Context) -> FilterRe
     )
 ```
 
-### Stage 3: LLM Classification with Usage Tracking
+### 단계 3: 사용량 추적(usage tracking)을 동반한 LLM 분류(classification)
 
 ```python
 async def classify_agents(filter_result: FilterResult, context: Context) -> ClassifyResult:
@@ -232,7 +232,7 @@ Be conservative - only mark is_agent=true if clearly building autonomous AI syst
     )
 ```
 
-### Stage 4: Insight Generation
+### 단계 4: 인사이트 생성
 
 ```python
 async def analyze_trends(classify_result: ClassifyResult, context: Context) -> AnalysisResult:
@@ -287,11 +287,11 @@ async def analyze_trends(classify_result: ClassifyResult, context: Context) -> A
     )
 ```
 
-## Production Considerations
+## 프로덕션 고려 사항
 
-### Testing Strategy
+### 테스트 전략
 
-Each workflow step is independently testable:
+각 워크플로(workflow) 단계는 독립적으로 테스트 가능합니다:
 
 ```python
 @pytest.mark.asyncio
@@ -313,7 +313,7 @@ async def test_filter_keywords():
     assert result.agent_keywords == 2  # Only companies with both AI and agents
 ```
 
-### Error Handling and Resilience
+### 오류(error) 처리와 복원력(resilience)
 
 ```python
 async def classify_with_retry(company, client, max_retries=3):
@@ -327,49 +327,49 @@ async def classify_with_retry(company, client, max_retries=3):
             await asyncio.sleep(2 ** attempt)  # Exponential backoff
 ```
 
-### Cost Optimization Results
+### 비용 최적화(optimization) 결과
 
-Our two-stage filtering achieved dramatic cost savings:
+2단계 필터링(filtering)은 극적인 비용 절감을 달성했습니다:
 
-| Approach | Companies Processed | Estimated Cost | Actual Cost | Savings |
+| 접근법 | 처리 기업 수 | 예상 비용 | 실제 비용 | 절감률 |
 |----------|-------------------|----------------|-------------|---------|
-| Naive (all companies) | 5,000 | $70.00 | - | - |
-| Smart filtering | 500 | $7.00 | $6.84 | 90.2% |
+| 소박한 접근 (전체 기업) | 5,000 | $70.00 | - | - |
+| 지능형 필터링 | 500 | $7.00 | $6.84 | 90.2% |
 
-### Performance Metrics
+### 성능 지표
 
-- **Processing speed**: 115 companies in ~3 minutes
-- **Average cost per classification**: $0.014
-- **Accuracy**: 95%+ confidence scores on agent detection
-- **Resumability**: 100% - can restart from any checkpoint
+- **처리 속도**: 기업 115곳을 약 3분
+- **분류 1건 평균 비용**: $0.014
+- **정확도**: 에이전트 탐지(generation)에서 95%+ 신뢰도(confidence) 점수
+- **재개(resume) 가능성**: 100% - 모든 체크포인트(checkpoint)에서 재시작 가능
 
-## Key Insights from the Analysis
+## 분석에서 얻은 핵심 인사이트
 
-The workflow revealed compelling trends about AI agents in the startup ecosystem:
+이 워크플로(workflow)는 스타트업 생태계의 AI 에이전트(agent)에 관한 주목할 만한 추세를 드러냈습니다:
 
-### Growth Trajectory
-- **2020**: 5 YC companies building AI agents
-- **2024**: 234 YC companies building AI agents
-- **Growth rate**: 47x increase over 4 years
+### 성장 궤적
+- **2020년**: AI 에이전트를 구축하는 YC 기업 5곳
+- **2024년**: AI 에이전트를 구축하는 YC 기업 234곳
+- **성장률**: 4년간 47배 증가
 
-### Domain Distribution
-1. **Productivity** (89 companies): Task automation, scheduling, document processing
-2. **Health** (34 companies): Diagnostic assistants, patient care coordinators
-3. **Finance** (28 companies): Trading agents, fraud detection, compliance automation
-4. **Legal** (18 companies): Contract analysis, legal research automation
-5. **Other** (65 companies): Customer service, content creation, sales automation
+### 도메인(domain) 분포
+1. **생산성(Productivity)** (기업 89곳): 작업 자동화, 일정 관리, 문서 처리
+2. **건강(Health)** (기업 34곳): 진단 어시스턴트, 환자 케어 코디네이터
+3. **금융(Finance)** (기업 28곳): 트레이딩(trading) 에이전트, 사기 탐지, 컴플라이언스(automation) 자동화
+4. **법무(Legal)** (기업 18곳): 계약 분석, 법적 리서치(risk) 자동화
+5. **기타(Other)** (기업 65곳): 고객 서비스, 콘텐츠 생성, 영업 자동화
 
-### Technology Patterns
-- **Enterprise focus**: 78% target B2B markets
-- **Domain specialization**: Most agents focus on specific industry verticals
-- **Human-in-the-loop**: 65% implement human oversight mechanisms
-- **API-first**: 82% offer programmatic integration
+### 기술 패턴
+- **엔터프라이즈 중심**: 78%가 B2B 시장을 표적으로 함
+- **도메인(domain) 특화**: 대부분의 에이전트(agent)가 특정 산업 버티컬(vertical)에 집중
+- **휴먼 인 더 루프(human-in-the-loop)**: 65%가 사람 감독(oversight) 메커니즘 구현
+- **API 우선(API-first)**: 82%가 프로그래밍 방식 통합(programmatic integration) 제공
 
-## Lessons for Production Multi-Agent Systems
+## 프로덕션 멀티 에이전트 시스템을 위한 교훈
 
-### 1. Optimize for Total Cost of Ownership
+### 1. 총 소유 비용(TCO)으로 최적화(optimization)
 
-The biggest lesson: **intelligent filtering saves orders of magnitude in costs**. Don't just optimize the LLM calls—optimize what you send to the LLM.
+가장 큰 교훈은 **지능형 필터링(filtering)이 비용을 자릿수(order of magnitude) 단위로 절약한다**는 것입니다. LLM 호출만 최적화하지 말고 — LLM에게 보내는 것 자체를 최적화하십시오.
 
 ```python
 # Bad: Process everything
@@ -382,9 +382,9 @@ for company in relevant_companies:
     result = await expensive_llm_call(company)
 ```
 
-### 2. Structure Everything
+### 2. 모든 것을 구조화하라
 
-Unstructured LLM outputs are a liability in production. Use frameworks that enforce schemas:
+비정형 LLM 출력은 프로덕션에서 부담(부채)입니다. 스키마(schema)를 강제하는 프레임워크를 사용하십시오:
 
 ```python
 # Bad: Hope for consistent format
@@ -399,9 +399,9 @@ class AgentAnalysis:
     reason: str
 ```
 
-### 3. Make Everything Resumable
+### 3. 모든 것을 재개(resume) 가능하게 만들어라
 
-Production workflows fail. Design for resumability from day one:
+프로덕션 워크플로(workflow)는 실패합니다. 처음부터 재개 가능성을 설계하십시오:
 
 ```python
 # Save progress continuously
@@ -412,9 +412,9 @@ for company in remaining_companies:
     save_checkpoint(processed_companies, checkpoint_file)  # Always resumable
 ```
 
-### 4. Test Each Stage Independently
+### 4. 각 단계를 독립적으로 테스트하라
 
-Multi-agent workflows are complex. Test each component in isolation:
+멀티 에이전트 워크플로(workflow)는 복잡합니다. 각 구성 요소를 격리(isolation)해 테스트하십시오:
 
 ```python
 def test_keyword_filter():
@@ -427,32 +427,32 @@ def test_llm_classification():
     assert classify_company(test_company, mock_llm) == mock_response
 ```
 
-## Conclusion: Production-Ready Multi-Agent Patterns
+## 결론: 프로덕션 준비된 멀티 에이전트 패턴
 
-This YC analysis workflow demonstrates that production multi-agent systems require more than just chaining LLM calls. They need:
+이 YC 분석 워크플로(workflow)는 프로덕션 멀티 에이전트 시스템이 LLM 호출을 단순히 연결하는 것 이상을 요구함을 보여줍니다. 필요한 것은:
 
-1. **Intelligent preprocessing** to minimize expensive operations
-2. **Structured data flows** with type safety and validation
-3. **Robust error handling** with retry logic and checkpointing
-4. **Comprehensive testing** at the component level
-5. **Cost monitoring** and optimization throughout
-6. **Clear separation of concerns** between workflow stages
+1. **고비용 작업 최소화**를 위한 지능형 전처리(preprocessing)
+2. 타입 안정성(type safety)과 검증(validate)을 갖춘 **구조화된 데이터 흐름**
+3. 재시도(retry) 로직과 체크포인팅(checkpointing)을 갖춘 **견고한 오류(error) 처리**
+4. 구성 요소 단위 **종합적(comprehensive) 테스트**
+5. 전 과정에 걸친 **비용 모니터링**과 최적화(optimization)
+6. 워크플로 단계 간 **명확한 관심사 분리**
 
-The result: a system that processes thousands of companies, extracts accurate insights, costs under $7 to run, and can resume from any failure point.
+결과: 수천 개 기업을 처리하고, 정확한 인사이트를 추출하고, 실행 비용 $7 미만으로 끝나고, 어떤 지점의 실패에서도 재개할 수 있는 시스템이 나왔습니다.
 
-Most importantly, this isn't just a demo—it's a production system that generated real insights about a $100B+ startup ecosystem. The patterns and architecture decisions scale to much larger problems.
+가장 중요한 것은, 이것이 데모가 아니라 1,000억 달러 이상 규모 스타트업 생태계에 대한 실제 인사이트를 만들어 낸 프로덕션 시스템이라는 점입니다. 패턴과 아키텍처(architecture) 결정은 훨씬 더 큰 문제로 확장됩니다.
 
-Whether you're building financial analysis agents, content generation pipelines, or customer service automation, these same principles apply. Start with clear data models, optimize for total cost, build in resilience, and test everything independently.
+금융 분석 에이전트(agent), 콘텐츠 생성 파이프라인, 고객 서비스 자동화 가운데 무엇을 만들든 동일한 원리가 적용됩니다. 명확한 데이터 모델로 시작하고, 총 비용을 최적화하고, 복원력(resilience)을 내장하고, 모든 것을 독립적으로 테스트하십시오.
 
-The future of AI applications isn't just about better models—it's about better engineering.
+AI 애플리케이션의 미래는 더 나은 모델만의 문제가 아닙니다 — 더 나은 엔지니어링의 문제입니다.
 
 ---
 
-*The complete source code for this workflow is available at: [GitHub repository link]*
+*이 워크플로(workflow)의 전체 소스 코드는 다음에서 확인할 수 있습니다: [GitHub repository link]*
 
-## Appendix: Running the Analysis
+## 부록: 분석 실행하기
 
-To reproduce this analysis:
+이 분석을 재현하려면:
 
 ```bash
 # Set up environment
@@ -467,12 +467,12 @@ python workflow.py
 # Results in ./data/analysis.md
 ```
 
-The workflow will:
-1. Download YC company data (cached after first run)
-2. Apply keyword filtering
-3. Classify companies with structured LLM output
-4. Generate insights and cost analysis
-5. Save results and usage metrics
+워크플로(workflow)는 다음을 수행합니다:
+1. YC 기업 데이터 다운로드(첫 실행 이후 캐싱(caching))
+2. 키워드 필터링(filtering) 적용
+3. 구조화된 LLM 출력(structured output)으로 기업 분류(classification)
+4. 인사이트와 비용 분석 생성
+5. 결과와 사용량 지표 저장
 
-Total runtime: ~5-10 minutes depending on batch size.
-Total cost: ~$7 for complete analysis of 5,000+ companies.
+총 실행 시간: 배치(batch) 크기에 따라 약 5-10분.
+총 비용: 기업 5,000여 곳 전체 분석에 약 $7.

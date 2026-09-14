@@ -1,8 +1,8 @@
-# Microsoft Agent Framework Examples
+# Microsoft Agent Framework 예시
 
-These examples demonstrate the same patterns from PicoAgents implemented using Microsoft's Agent Framework. Note that Microsoft's Agent Framework is built by the same team that developed AutoGen and Semantic Kernel and is the successor to both libraries.
+이 예시들은 PicoAgents의 동일 패턴을 Microsoft Agent Framework로 구현한 것입니다. Microsoft Agent Framework는 AutoGen과 Semantic Kernel을 개발한 것과 같은 팀이 만들었으며, 두 라이브러리의 후속 세대입니다.
 
-## Setup
+## 설정
 
 ```bash
 # Install agent-framework with Azure support
@@ -21,37 +21,37 @@ export AZURE_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
 export AZURE_OPENAI_CHAT_DEPLOYMENT_NAME="gpt-4.1-mini"
 ```
 
-## Examples
+## 예시
 
-### Agents
+### 에이전트(agent)
 
-| Example                       | PicoAgents Equivalent         | Description                             |
+| 예시                        | PicoAgents 대응              | 설명                                     |
 | ----------------------------- | ----------------------------- | --------------------------------------- |
-| `agents/basic_agent.py`       | `agents/basic-agent.py`       | Agent with weather and calculator tools |
-| `agents/memory.py`            | `agents/memory.py`            | Context provider for memory injection   |
-| `agents/structured_output.py` | `agents/structured-output.py` | Pydantic model responses                |
+| `agents/basic_agent.py`       | `agents/basic-agent.py`       | 날씨·계산기 도구를 갖춘 에이전트 |
+| `agents/memory.py`            | `agents/memory.py`            | 메모리(memory) 주입용 컨텍스트(provider) 제공자   |
+| `agents/structured_output.py` | `agents/structured-output.py` | Pydantic 모델 응답                |
 
-### Workflows
+### 워크플로(workflow)
 
-| Example                   | PicoAgents Equivalent     | Description               |
+| 예시                      | PicoAgents 대응              | 설명                       |
 | ------------------------- | ------------------------- | ------------------------- |
-| `workflows/sequential.py` | `workflows/sequential.py` | Sequential agent pipeline |
+| `workflows/sequential.py` | `workflows/sequential.py` | 순차 에이전트 파이프라인 |
 
-### Orchestration
+### 오케스트레이션(orchestration)
 
-| Example                        | PicoAgents Equivalent          | Description                    |
+| 예시                           | PicoAgents 대응                   | 설명                          |
 | ------------------------------ | ------------------------------ | ------------------------------ |
-| `orchestration/round_robin.py` | `orchestration/round-robin.py` | Poet and critic collaboration  |
-| `orchestration/handoff.py`     | (new pattern)                  | Agent-to-agent handoff routing |
+| `orchestration/round_robin.py` | `orchestration/round-robin.py` | 시인(poet)과 비평가(critic)의 협업  |
+| `orchestration/handoff.py`     | (신규 패턴)                  | 에이전트 간 핸드오프(handoff) 라우팅(routing) |
 
-## Key Differences from PicoAgents
+## PicoAgents와의 주요 차이점
 
-1. **Stateless agents**: Agent Framework agents don't store conversation history internally - use `AgentThread` for state
-2. **Context providers**: More structured approach to memory injection with `invoking()` and `invoked()` hooks
-3. **Workflow builders**: Fluent API pattern (`SequentialBuilder`, `HandoffBuilder`, etc.)
-4. **Event streaming**: All operations emit structured `WorkflowEvent` types
+1. **상태(state)리스 에이전트**: Agent Framework의 에이전트는 대화 기록을 내부에 저장하지 않습니다 - 상태(state)는 `AgentThread`를 사용
+2. **컨텍스트 제공자(context provider)**: `invoking()`과 `invoked()` 훅(hook)을 활용한 더 구조화된 메모리(memory) 주입 방식
+3. **워크플로(workflow) 빌더(builder)**: 플루언트(fluent) API 패턴 (`SequentialBuilder`, `HandoffBuilder` 등)
+4. **이벤트 스트리밍(streaming)**: 모든 작업이 구조화된 `WorkflowEvent` 유형을 방출
 
-## Running Examples
+## 예시 실행
 
 ```bash
 # From the examples/frameworks/agent-framework directory

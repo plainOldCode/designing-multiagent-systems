@@ -1,22 +1,22 @@
-# YC Agent Analysis Workflow
+# YC 에이전트(agent) 분석 워크플로(workflow)
 
-Production-ready data analysis demonstrating PicoAgents patterns.
+PicoAgents 패턴을 보여 주는, 프로덕션 사용에 준비된 데이터 분석입니다.
 
-## Key Insights
+## 핵심 인사이트
 
-• **234/5,000+ YC companies (4.7%) now build AI agents** (2024 data)
-• **Growth**: From 5 companies (2020) to 234 companies (2024) - 47x increase
-• **Top domains**: Productivity (89), Health (34), Finance (28)
-• **Cost efficiency**: 90% reduction via keyword pre-filtering
+• **YC 기업 5,000여 곳 중 234곳 (4.7%)이 이제 AI 에이전트를 구축** (2024 데이터)
+• **성장**: 기업 5곳 (2020)에서 기업 234곳 (2024)으로 — 47배 증가
+• **최상위 도메인(domain)**: 생산성(Productivity) (89), 건강(Health) (34), 금융(Finance) (28)
+• **비용 효율**: 키워드 사전 필터링(pre-filtering)으로 90% 절감
 
-## Engineering Patterns
+## 엔지니어링 패턴
 
-**Two-stage filtering**: Keywords → AI classification saves $4+ per run
-**Structured output**: Zero hallucination with Pydantic schemas
-**Disk checkpoints**: Resume processing after interruptions
-**Independent testing**: Each step unit-testable
+**2단계 필터링(filtering)**: 키워드 → AI 분류(classification)로 실행당 $4+ 절감
+**구조화된 출력(structured output)**: Pydantic 스키마(schema)로 할루시네이션(hallucination) 0
+**디스크 체크포인트(disk checkpoint)**: 중단 이후 처리 재개
+**독립적 테스트**: 각 단계 단위 테스트 가능
 
-## Quick Start
+## 빠른 시작
 
 ```bash
 # Set credentials
@@ -30,12 +30,12 @@ python workflow.py
 python test_workflow.py
 ```
 
-## Files
+## 파일
 
-- `models.py` - Pydantic schemas for type safety
-- `steps.py` - Individual workflow functions (testable)
-- `workflow.py` - Main orchestration
-- `test_workflow.py` - Unit tests for each component
-- `data/` - Cache directory (gitignored)
+- `models.py` - 타입 안정성(type safety)을 위한 Pydantic 스키마(schema)
+- `steps.py` - 개별 워크플로(workflow) 함수 (테스트 가능)
+- `workflow.py` - 주요 오케스트레이션(orchestration)
+- `test_workflow.py` - 각 구성 요소의 단위 테스트
+- `data/` - 캐싱(caching) 디렉터리 (gitignored)
 
-Generated report: `./yc_analysis/data/analysis.md`
+생성된 보고서: `./yc_analysis/data/analysis.md`
